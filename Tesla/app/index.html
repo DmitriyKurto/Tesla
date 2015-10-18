@@ -4,73 +4,30 @@
     <meta charset="UTF-8">
     <title>Tesla Power Wall</title>
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/data.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/dashboardCtrl.js"></script>
+    <script src="js/controllers/dataCtrl.js"></script>
 </head>
 <body>
 <header>
     <div class="logo"><a href="#"><img src="img/logo.png" alt="Tesla logo"></a></div>
-    <nav class="main-menu">
+    <nav class="main-menu {{active}}">
         <ul>
-            <li><a href="#/index.html"><img src="img/dashboard.png">Dashboard</a></li>
-            <li><a href="#/statistics.html"><img src="img/statistics.png">Statistics</a></li>
-            <li><a href="#"><img src="img/appliance.png">Appliance</a></li>
-            <li><a href="#"><img src="img/settings.png"> Settings</a></li>
-            <li><a href="#"><img src="img/data.png">Data</a></li>
+            <li><a href="#/index" ng-click="active"><img src="img/dashboard.png">Dashboard</a></li>
+            <li><a href="#/statistics"><img src="img/statistics.png">Statistics</a></li>
+            <li><a href="#/appliance"><img src="img/appliance.png">Appliance</a></li>
+            <li><a href="#/settings"><img src="img/settings.png"> Settings</a></li>
+            <li><a href="#/data"><img src="img/data.png">Data</a></li>
         </ul>
     </nav>
 </header>
 <main ui-view>
-    <div class="left-panel">
-        <div class="chart">
-            <h3>Quick information</h3>
-        </div>
 
-        <div class="choice-charge">
-            <h3>Power Used To Charge The Battery</h3>
-            <div>
-                <form>
-                    <button class="btn-grid"><img src="img/grid.png"></button>
-                    <button class="btn-solar"><img src="img/panel.png"></button>
-                </form>
-            </div>
-
-            <div class="tap">
-            <img src="img/hand.png"><p>Tap here To Control Solar Panel</p>
-            </div>
-        </div>
-    </div>
-    <div class="battery-info">
-        <h3>Battery Information</h3>
-        <p class="amount-battery">You Have 2 Installed Powerwall. Total Power 20 kWh</p>
-        <div class="battery1">
-            <img src="img/battery1.png">
-            <p class="power">Powerwall 10kWh v.1</p>
-            <div class="status">
-                <p><img src="img/on.png">Active</p>
-            </div>
-            <duv class="charge-line">
-                <p>Capacity 100%</p>
-            </duv>
-            <div class="temp">
-                <p>Normal 30&degC</p>
-            </div>
-        </div>
-        <div class="battery2">
-            <img src="img/battery2.png">
-            <p class="power">Powerwall 10kWh v.1</p>
-            <div class="status">
-                <p><img src="img/on.png">Active</p>
-            </div>
-            <duv class="charge-line">
-                <p>Capacity 30%</p>
-            </duv>
-            <div class="temp">
-                <p>Normal 30&degC</p>
-            </div>
-        </div>
-        <div class="tap"><img src="img/hand.png"><p>Double Tap Each Battery To Get Specific Information</p></div>
-    </div>
 </main>
 </body>
 </html>

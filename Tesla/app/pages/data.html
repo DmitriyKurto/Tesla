@@ -1,0 +1,25 @@
+<div class="data">
+<h1> Please enter your information</h1>
+   <div class="question">
+       <p>The number of powerwall</p>
+       <p>Power powerwall</p>
+       <p>Status</p>
+       <p>Capacity</p>
+       <p>Temperature</p>
+   </div>
+    <div class="form" ng-controller="dataCtrl">
+        <label><input type="number" ng-model="powerwall.number"></label>
+        <label><input type="number" ng-model="powerwall.power"></label>
+        <label>
+            <select>
+            <option value="active">Active</option>
+            <option value="passive">Passive</option>
+            </select>
+        </label>
+        <label><input type="number" ng-model="powerwall.capacity"></label>
+        <label><input type="number" ng-model="powerwall.temp"></label>
+    </div>
+
+       <button class="btn-save" ng-click="save()">Save</button>
+
+</div>

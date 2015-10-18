@@ -1,0 +1,50 @@
+<div class="left-panel">
+    <div class="chart">
+        <h3>Quick information</h3>
+    </div>
+
+    <div class="choice-charge">
+        <h3>Power Used To Charge The Battery</h3>
+        <div>
+            <form>
+                <button class="btn-grid"><img src="img/grid.png"></button>
+                <button class="btn-solar"><img src="img/panel.png"></button>
+            </form>
+        </div>
+
+        <div class="tap">
+            <img src="img/hand.png"><p>Tap here To Control Solar Panel</p>
+        </div>
+    </div>
+</div>
+<div class="battery-info" ng-controller="dataCtrl">
+    <h3>Battery Information</h3>
+    <p class="amount-battery">You Have {{powerwall.number}} Installed Powerwall. Total Power {{powerwall.power*powerwall.number}} kWh</p>
+    <div class="battery1">
+        <img src="img/battery1.png">
+        <p class="power">Powerwall {{powerwall.power}}kWh v.1</p>
+        <div class="status">
+            <p><img src="img/on.png">Active</p>
+        </div>
+        <div class="charge-line">
+            <p>Capacity {{powerwall.capacity}}%</p>
+        </div>
+        <div class="temp">
+            <p>Normal {{powerwall.temp}}&degC</p>
+        </div>
+    </div>
+    <div class="battery2">
+        <img src="img/battery2.png">
+        <p class="power">Powerwall 10kWh v.1</p>
+        <div class="status">
+            <p><img src="img/on.png">Active</p>
+        </div>
+        <div class="charge-line">
+            <p>Capacity 30%</p>
+        </div>
+        <div class="temp">
+            <p>Normal 30&degC</p>
+        </div>
+    </div>
+    <div class="tap"><img src="img/hand.png"><p>Double Tap Each Battery To Get Specific Information</p></div>
+</div>
