@@ -1,0 +1,190 @@
+body{
+    margin: 0 auto;
+    min-width: 1366px;
+}
+header{
+    height: 112px;
+    overflow: hidden;
+}
+body{
+    background: #F3F3F3;
+}
+.logo{
+    float: left;
+    background: #FFFFFF;
+}
+.logo img{
+    padding: 20px 32px;
+}
+
+.main-menu{
+    margin-left: 280px;
+}
+.main-menu ul{
+    margin: 0;
+    padding: 0;
+    background-color: #393939;
+
+}
+.main-menu ul li{
+    display: inline-block;
+
+
+}
+.main-menu a img{
+    display: block;
+    margin: 0 auto;
+    padding-bottom:  10px;
+    opacity: 0.5;
+}
+.main-menu a{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font: 21px 'Quicksand', sans-serif;
+    color: #EBEBEB;
+    border-right: 2px solid #595959;
+    padding: 20px 58px 10px 58px;
+}
+
+.main-menu a:hover img{
+    opacity: 1;
+}
+
+h3{
+    margin: 0;
+    padding: 25px 0 0 25px;
+    color: #919191;
+    font: 100 18px Open Sans, sans-serif;
+}
+main{
+    margin: 30px 30px 0;
+}
+.chart{
+    width: 510px;
+    height: 505px;
+    background: #FFFFFF;
+    border:solid 2px #E9E9E9;
+}
+.choice-charge{
+    width: 510px;
+    height: 320px;
+    background: #FFFFFF;
+    margin: 25px 0 0;
+    border:solid 2px #E9E9E9;
+}
+
+.choice-charge button{
+    width: 220px;
+    height: 126px;
+    border: solid 3px #C1C1C1;
+    border-radius: 5px;
+   /* text-transform: uppercase;
+    font: 600 20px Open Sans, sans-serif;
+    padding: 0;*/
+    cursor: pointer;
+}
+
+.choice-charge form{
+    margin: 30px 10px 25px 25px;
+}
+.btn-grid{
+    background: #FFFFFF;
+    color: #787878;
+    margin: 0 14px 0 0;
+    text-align: center;
+   /* background-image: url("../img/grid.png") no-repeat;
+    background-position: 20% 50%;
+    */
+}
+.btn-solar{
+    background: #656565;
+    color: #FFFFFF;
+}
+
+.tap{
+    height: 73px;
+    margin: 0;
+    border-top: solid 2px #E8E8E8;
+    background: #F9F9F9;
+    padding: 15px 0 0 65px;
+}
+
+.tap img{
+    float: left;
+}
+
+.tap p{
+    margin: 20px 0 0 70px;
+    font: 100 20px Open Sans, sans-serif;
+    color: #A2A2A2;
+}
+
+.left-panel{
+    float: left;
+}
+.battery-info{
+    width: 770px;
+    height: 851px;
+    background: #FFFFFF;
+
+    margin: 0 0 0 535px;
+    border:solid 2px #E9E9E9;
+}
+
+.amount-battery{
+    margin: 20px 25px;
+    padding: 15px 30px;
+    border: solid 2px #E9EDD4;
+    border-radius: 7px;
+    background: #F6FADF;
+    font: 100 20px Open Sans, sans-serif;
+    color: #80807B;
+}
+
+.battery1{
+    float: left;
+padding: 10px 0 0 0;
+    width: 385px;
+    text-align: center;
+    border-right: solid 2px #ECECEC;
+    margin: 0 0 32px 0;
+}
+
+.power{
+    font: 100 20px Open Sans, sans-serif;
+    color: #B9B9B9;
+    margin: 23px 0;
+}
+
+.status img{
+    padding-right: 8px;
+}
+
+.status p{
+    font: 100 23px Open Sans, sans-serif;
+    color: #A1A1A1;
+}
+
+
+.charge-line p{
+    color: #929292;
+    font: 100 23px Open Sans, sans-serif;;
+}
+
+.temp p{
+   /* background: url("../img/temp.png") no-repeat 110px;*/
+    color: #148EC3;
+    font: 100 23px Open Sans, sans-serif;
+   /* padding: 0 0 0 40px;*/
+}
+
+.temp img{
+    padding: 2px 8px 0 0;
+}
+
+.battery2{
+    text-align: center;
+    margin: 0 0 32px 0;
+    overflow: hidden;
+}
