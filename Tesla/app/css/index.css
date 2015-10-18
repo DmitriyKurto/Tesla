@@ -125,7 +125,7 @@ main{
 }
 .battery-info{
     width: 770px;
-    height: 851px;
+    height: 853px;
     background: #FFFFFF;
 
     margin: 0 0 0 535px;
@@ -148,7 +148,7 @@ padding: 10px 0 0 0;
     width: 385px;
     text-align: center;
     border-right: solid 2px #ECECEC;
-    margin: 0 0 32px 0;
+    margin: 0 0 21px 0;
 }
 
 .power{
@@ -186,6 +186,6 @@ padding: 10px 0 0 0;
 .battery2{
     text-align: center;
     padding: 10px 0 0 0;
-    margin: 0 0 32px 0;
+    margin: 0 0 21px 0;
     overflow: hidden;
 }
