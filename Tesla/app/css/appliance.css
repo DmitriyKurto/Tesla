@@ -1,0 +1,94 @@
+.counter {
+    width: 385px;
+    height: 390px;
+    background: #FFFFFF;
+    border: solid 2px #E9E9E9;
+    float: left;
+
+}
+
+.total{
+    text-align: center;
+    border-bottom: 2px solid #F1F1F1;
+}
+.total span{
+    display: block;
+    height: 170px;
+    color: #393939;
+    font: 600 150px Open Sans, sans-serif;
+}
+.total p{
+    color: #DADADA;
+    font: 600 18px Open Sans, sans-serif;
+    margin: 15px 0 40px 0;
+}
+.counter a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #E42451;
+    font: 600 18px Open Sans, sans-serif;
+    margin: 30px 0 0 0;
+}
+.add{
+    width: 385px;
+    height: 390px;
+    background: #FFFFFF;
+    border: solid 2px #E9E9E9;
+    float: left;
+}
+.add form{
+    text-align: center;
+}
+.add label{
+    display: block;
+    margin: 30px 0 10px 0;
+    font: 300 18px Open Sans, sans-serif;;
+    color: #4A4A4A;
+}
+
+.add input{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+.add .bottom{
+    margin: 50px 0;
+}
+.bottom a{
+    text-decoration: none;
+    color: #E42451;
+}
+.bottom button{
+    display:inline-block;
+    margin: 0 0 0 80px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color:  #44B449;
+    color: #FFFFFF;
+}
+.list{
+    width: 890px;
+    background: #FFFFFF;
+    margin: 0 0 0 410px;
+    border:solid 2px #E9E9E9;
+}
+.list ul{
+    list-style-type: none;
+}
+.list p{
+    color: #858585;
+}
+
+h1{
+    margin: 0;
+    padding: 25px 0 0 25px;
+    color: #919191;
+    font: 100 18px Open Sans, sans-serif;
+}
+
+.row{
+    border-top: 2px solid #E9E9E9;
+}

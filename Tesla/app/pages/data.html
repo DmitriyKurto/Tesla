@@ -7,19 +7,19 @@
        <p>Capacity</p>
        <p>Temperature</p>
    </div>
-    <div class="form" ng-controller="dataCtrl">
-        <label><input type="number" ng-model="powerwall.number"></label>
-        <label><input type="number" ng-model="powerwall.power"></label>
+    <div class="dataForm">
+        <label><input type="number" ng-model="vm.powerwall.number"></label>
+        <label><input type="number" ng-model="vm.powerwall.power"></label>
         <label>
-            <select>
-            <option value="active">Active</option>
-            <option value="passive">Passive</option>
+            <select ng-model="vm.powerwall.status">
+                <option value="Active">Active</option>
+                <option value="Passive">Passive</option>
             </select>
         </label>
-        <label><input type="number" ng-model="powerwall.capacity"></label>
-        <label><input type="number" ng-model="powerwall.temp"></label>
+        <label><input type="number" ng-model="vm.powerwall.capacity"></label>
+        <label><input type="number" ng-model="vm.powerwall.temp"></label>
     </div>
 
-       <button class="btn-save" ng-click="save()">Save</button>
+       <button class="btn-save" ng-click="vm.save()">Save</button>
 
 </div>

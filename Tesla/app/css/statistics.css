@@ -1,0 +1,19 @@
+.live{
+    background: #FFFFFF;
+    border:solid 2px #E9E9E9;
+    /*width: ;*/
+    height: 485px;
+}
+
+.days{
+    margin: 25px 0 0 0;
+    background: #FFFFFF;
+    border:solid 2px #E9E9E9;
+    /*width: ;*/
+    height: 320px;
+}
+
+.day{
+    float: left;
+    width: 400px;
+}

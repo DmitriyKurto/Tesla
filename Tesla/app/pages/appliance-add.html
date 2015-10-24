@@ -1,0 +1,20 @@
+<div class="add">
+    <h1>Add new appliance</h1>
+    <form name="addForm" ng-submit="vm.addAppliance()">
+        <div>
+            <label>Name</label>
+            <br>
+            <input type="text" name='name' ng-model="vm.applianceName" placeholder="Enter name your new devices" required>
+        </div>
+       <div>
+           <label>Power</label>
+           <br>
+           <input type="number" name='power' ng-model="vm.appliancePower" placeholder="Enter power your new devices" required>
+       </div>
+        <div class="bottom">
+            <a ui-sref="appliance" class="btn">Cancel</a>
+            <button type="submit">Save</button>
+        </div>
+
+    </form>
+</div>

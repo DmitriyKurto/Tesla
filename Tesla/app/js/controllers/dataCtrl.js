@@ -4,21 +4,16 @@
 ;(function(){
     'use strict';
 
-    function dataCtrl($scope){
-        $scope.powerwall= {
-            number: 2,
-            power: 10,
-            status: '',
-            capacity: 10,
-            temp: 10
+    function DataCtrl($localstorage) {
+        var vm = this;
+        vm.powerwall = $localstorage.getObject('vm.powerwall');
+        /*vm.powerwall = JSON.parse(window.localStorage['vm.powerwall'] || '{}');*/
+        vm.save = function ($localstorage) {
+            $localstorage.setObject('vm.powerwall')
         }
     }
-     /*   $scope.save=function(){
-            $scope.powerwall.push
-        }
-     */
+           /* window.localStorage['vm.powerwall'] = JSON.stringify(vm.powerwall);*/
 
-
-    angular.module('Tesla.data',[])
-        .controller('dataCtrl', dataCtrl)
+    angular.module('Tesla.data',['Tesla.shareData'])
+        .controller('DataCtrl', DataCtrl)
 }());

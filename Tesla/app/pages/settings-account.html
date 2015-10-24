@@ -1,0 +1,16 @@
+<div class="settings">
+    <h1>Battery Access Account</h1>
+    <form name='loginForm' ng-submit="vm.login()">
+        <div class="userName">
+            <label for="username">Username<input id="username" type="text" required/></label>
+        </div>
+        <div class="password">
+        <label for="password">Password  <input id="password" type="password" required/></label>
+        </div>
+        <!--<div ng-show="vm.error" class="alert alert-danger">{{vm.error}}</div>-->
+
+
+        <button ng-disabled='loginForm.$invalid'>Login</button>
+        <a ui-sref=".register">Register</a>
+    </form>
+</div>

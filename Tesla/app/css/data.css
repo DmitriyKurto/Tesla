@@ -1,14 +1,15 @@
 .data{
     background: #FFFFFF;
     border:solid 2px #E9E9E9;
+    /*width: ;*/
     height: 300px;
 }
 
-h1{
+.data h1{
     margin: 0;
     padding: 25px 0 0 25px;
     color: #919191;
-    font: 100 28px Open Sans, sans-serif;;
+    font: 100 18px Open Sans, sans-serif;
 }
 
 .question{
@@ -17,14 +18,15 @@ h1{
 
 }
 .question p{
-    margin: 10px 0 10px 25px;
+    margin: 10px 0 10px 60px;
     font: 100 20px Open Sans, sans-serif;
     color: #A2A2A2;
 }
-input{
+
+.dataForm input{
     display: block;
     margin: 15px;
 }
-.form{
+.dataForm{
     margin: 15px 0;
 }

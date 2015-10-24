@@ -1,0 +1,31 @@
+<div class="battery-info">
+    <h3>Battery Information</h3>
+    <p class="amount-battery">You Have {{vm.powerwall.number}} Installed Powerwall. Total Power {{vm.powerwall.power * vm.powerwall.number}} kWh</p>
+    <div class="battery1">
+        <img src="img/battery1.png">
+        <p class="power">Powerwall {{vm.powerwall.power}}kWh v.1</p>
+        <div class="status">
+            <p><img src="img/on.png">{{vm.powerwall.status}}</p>
+        </div>
+        <div class="charge-line">
+            <p>Capacity {{vm.powerwall.capacity}}%</p>
+        </div>
+        <div class="temp">
+            <p>Normal {{vm.powerwall.temp}}&degC</p>
+        </div>
+    </div>
+    <div class="battery2">
+        <img src="img/battery2.png">
+        <p class="power">Powerwall 10kWh v.1</p>
+        <div class="status">
+            <p><img src="img/on.png">Active</p>
+        </div>
+        <div class="charge-line">
+            <p>Capacity 30%</p>
+        </div>
+        <div class="temp">
+            <p>Normal 30&degC</p>
+        </div>
+    </div>
+    <div class="tap"><img src="img/hand.png"><p>Double Tap Each Battery To Get Specific Information</p></div>
+</div>
