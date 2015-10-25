@@ -4,12 +4,11 @@
 ;(function(){
   'use strict';
 
-    function DashboardCtrl($localstorage){
+    function DashboardCtrl($localStorage){
         var vm = this;
-        vm.powerwall = $localstorage.getObject('vm.powerwall');
-        /*vm.powerwall = JSON.parse(window.localStorage['vm.powerwall'] || '{}');*/
+        vm.powerwall = $localStorage.getObject('Powerwall');
     }
 
-    angular.module('Tesla.dashboard',['Tesla.shareData'])
+    angular.module('Tesla.dashboard',[])
         .controller('DashboardCtrl', DashboardCtrl)
 }());

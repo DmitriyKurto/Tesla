@@ -13,20 +13,23 @@
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<header>
-    <div class="logo"><a href="#"><img src="img/logo.png" alt="Tesla logo"></a></div>
-    <nav class="main-menu">
-        <ul>
-            <li><a ui-sref="dashboard"><img src="img/dashboard.png">Dashboard</a></li>
-            <li><a ui-sref="statistics"><img src="img/statistics.png">Statistics</a></li>
-            <li><a ui-sref="appliance"><img src="img/appliance.png">Appliance</a></li>
-            <li><a ui-sref="settings"><img src="img/settings.png"> Settings</a></li>
-            <li><a ui-sref="data"><img src="img/data.png">Data</a></li>
-        </ul>
-    </nav>
-</header>
-<main ui-view>
-</main>
+<div>
+    <header>
+        <div class="logo"><a href="dashboard"><img src="img/logo.png" alt="Tesla logo"></a></div>
+        <nav class="main-menu">
+            <ul>
+                <li><a ui-sref="dashboard"><img src="img/dashboard.png">Dashboard</a></li>
+                <li><a ui-sref="statistics"><img src="img/statistics.png">Statistics</a></li>
+                <li><a ui-sref="appliance"><img src="img/appliance.png">Appliance</a></li>
+                <li><a ui-sref="settings"><img src="img/settings.png"> Settings</a></li>
+                <li><a ui-sref="data"><img src="img/data.png">Data</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main ui-view>
+    </main>
+</div>
+
 <script src="../../bower_components/angular/angular.js"></script>
 <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="../../bower_components/d3/d3.min.js"></script>
@@ -43,7 +46,7 @@
 <script src="js/controllers/dataCtrl.js"></script>
 
 <script src="js/services/shareApplianceService.js"></script>
-<script src="js/services/shareDateService.js"></script>
+<script src="js/services/localStorageService.js"></script>
 <script src="js/services/authentication.js"></script>
 </body>
 </html>

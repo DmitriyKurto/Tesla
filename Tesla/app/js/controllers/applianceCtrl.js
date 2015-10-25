@@ -6,6 +6,8 @@
     function ApplianceCtrl(ShareAppliance) {
         var vm = this;
         vm.appliances = ShareAppliance.appliances;
+
+
         /*
          var vm = this;
          vm.appliances = [{text:'TV'}];

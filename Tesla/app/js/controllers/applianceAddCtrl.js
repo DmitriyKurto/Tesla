@@ -3,12 +3,23 @@
  */
 ;(function(){
 
-    function ApplianceAddCtrl(ShareAppliance) {
+    function ApplianceAddCtrl($localStorage) {
         var vm = this;
-        vm.appliances = ShareAppliance.appliances;
-        vm.addAppliance = function(applianceName, appliancePower){
-            ShareAppliance.addAppliance(applianceName, appliancePower)
-        };
+        console.log('sf1');
+
+        //vm.appliances = ShareAppliance.appliances;
+        //vm.addAppliance = function(applianceName, appliancePower){
+        //    ShareAppliance.addAppliance(applianceName, appliancePower)
+        //};
+
+        vm.appliances =[{
+            name: '',
+            power: ''
+        }];
+        vm.addAppliance = function () {
+            $localStorage
+                .setObject('Appliance', vm.appliances);
+        }
     }
 
     angular.module('Tesla.add',[])

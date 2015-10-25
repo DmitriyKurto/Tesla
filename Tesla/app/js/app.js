@@ -5,7 +5,7 @@
     'use strict';
 
     function config($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise('data');
+        $urlRouterProvider.otherwise('dashboard');
 
         $stateProvider
             .state('dashboard', {
@@ -52,8 +52,9 @@
             .state('appliance.add',{
                 url:'/add',
             views:{
-                'counter':{templateUrl: 'pages/appliance-add.html'},
-                controller:'ApplianceAddCtrl as vm'
+                'counter@appliance':{
+                    templateUrl: 'pages/appliance-add.html'},
+                    controller: 'ApplianceAddCtrl as vm'
                 }
             })
             .state('settings',{
@@ -91,6 +92,20 @@
             })
     }
 
+    function AppRun ($localStorage) {
+
+            if (!$localStorage.get('Powerwall')) {
+
+             var data = {
+                     number: 5,
+                     power: 5,
+                     status: 'Active',
+                     capacity: 5,
+                     temperature: 5
+             };
+                $localStorage.setObject('Powerwall', data);
+            }
+    }
 
     angular.module('Tesla', [
         'ui.router',
@@ -108,6 +123,7 @@
         'Tesla.data'
 
     ])
+        .run(AppRun)
         .config(config,'config');
 
 }());

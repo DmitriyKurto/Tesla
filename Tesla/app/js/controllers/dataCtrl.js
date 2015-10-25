@@ -4,16 +4,16 @@
 ;(function(){
     'use strict';
 
-    function DataCtrl($localstorage) {
+    function DataCtrl($localStorage) {
         var vm = this;
-        vm.powerwall = $localstorage.getObject('vm.powerwall');
-        /*vm.powerwall = JSON.parse(window.localStorage['vm.powerwall'] || '{}');*/
-        vm.save = function ($localstorage) {
-            $localstorage.setObject('vm.powerwall')
+        vm.powerwall = $localStorage.getObject('Powerwall');
+
+        vm.save = function () {
+                $localStorage
+                .setObject('Powerwall', vm.powerwall)
         }
     }
-           /* window.localStorage['vm.powerwall'] = JSON.stringify(vm.powerwall);*/
 
-    angular.module('Tesla.data',['Tesla.shareData'])
+    angular.module('Tesla.data',[])
         .controller('DataCtrl', DataCtrl)
 }());
