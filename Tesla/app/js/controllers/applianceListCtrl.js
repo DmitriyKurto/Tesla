@@ -3,11 +3,11 @@
  */
 ;(function(){
 
-    function ApplianceListCtrl(ShareAppliance) {
+    function ApplianceListCtrl($localStorage, ShareAppliance) {
         var vm = this;
         vm.appliances = ShareAppliance.appliances;
-
     }
+
 
     angular.module('Tesla.list',[])
         .controller('ApplianceListCtrl', ApplianceListCtrl)

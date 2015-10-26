@@ -19,9 +19,7 @@
                 return JSON.parse($window.localStorage[key] || '{}');
             }
         }
-
     }
-
 
     angular.module('Tesla.shareData',[])
         .service('$localStorage', $localStorage);

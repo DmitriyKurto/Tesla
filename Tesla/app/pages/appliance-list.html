@@ -1,7 +1,7 @@
 <div class="list">
 <h1>List of Appliances</h1>
     <ul>
-        <li ng-repeat="appliance in vm.appliances" class="row">
+        <li ng-repeat="appliance in vm.appliances track by $index" class="row">
             <p>{{$index + 1}}. {{appliance.name}} {{appliance.power}}</p>
         </li>
     </ul>

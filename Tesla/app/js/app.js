@@ -41,7 +41,7 @@
                     '': {templateUrl: 'pages/appliance.html'},
                     'counter@appliance': {
                         templateUrl: 'pages/appliance-counter.html',
-                        controller: 'ApplianceCtrl as vm'
+                        controller: 'ApplianceCounterCtrl as vm'
                     },
                     'list@appliance': {
                         templateUrl: 'pages/appliance-list.html',
@@ -51,11 +51,12 @@
             })
             .state('appliance.add',{
                 url:'/add',
-            views:{
-                'counter@appliance':{
-                    templateUrl: 'pages/appliance-add.html'},
+            views: {
+                'counter@appliance': {
+                    templateUrl: 'pages/appliance-add.html',
                     controller: 'ApplianceAddCtrl as vm'
                 }
+            }
             })
             .state('settings',{
                 url:'/settings',
@@ -103,16 +104,29 @@
                      capacity: 5,
                      temperature: 5
              };
+
                 $localStorage.setObject('Powerwall', data);
+
+            }
+            if (!$localStorage.get('Appliances')){
+                var appliance = [{
+                    name:'TV',
+                    power: 25
+                }, {
+                    name:'macBook',
+                    power: 7
+                }];
+                $localStorage.setObject('Appliances', appliance);
             }
     }
 
     angular.module('Tesla', [
         'ui.router',
         'Tesla.dashboard',
-        'Tesla.appliance',
+
         'Tesla.live',
         'Tesla.days',
+        'Tesla.counter',
         'Tesla.add',
         'Tesla.list',
         'Tesla.shareAppliance',
