@@ -21,6 +21,6 @@
         }
     }
 
-    angular.module('Tesla.shareData',[])
+    angular.module('Tesla.localStorage',[])
         .service('$localStorage', $localStorage);
 }());

@@ -3,9 +3,14 @@
  */
 ;(function(){
 
-    function ApplianceListCtrl($localStorage, ShareAppliance) {
+    function ApplianceListCtrl(ShareAppliance, $localStorage) {
         var vm = this;
         vm.appliances = ShareAppliance.appliances;
+
+        vm.deleteAppliance = function($index){
+            vm.appliances.splice($index, 1);
+            $localStorage.setObject('Appliances', vm.appliances);
+        }
     }
 
 

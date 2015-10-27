@@ -123,19 +123,17 @@
     angular.module('Tesla', [
         'ui.router',
         'Tesla.dashboard',
-
         'Tesla.live',
         'Tesla.days',
         'Tesla.counter',
         'Tesla.add',
         'Tesla.list',
         'Tesla.shareAppliance',
-        'Tesla.shareData',
         'Tesla.settings',
         'Tesla.account',
         'Tesla.authentication',
-        'Tesla.data'
-
+        'Tesla.data',
+        'Tesla.localStorage'
     ])
         .run(AppRun)
         .config(config,'config');

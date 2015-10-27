@@ -92,3 +92,16 @@ h1{
 .row{
     border-top: 2px solid #E9E9E9;
 }
+
+.btn-delete{
+    margin-top: -5px;
+    background: transparent;
+    border: none;
+    float: right!important;
+    cursor: pointer;
+    opacity: .2;
+    font: bold 21px Arial;
+}
+.btn-delete:hover{
+    opacity: 1;
+}
