@@ -1,7 +1,6 @@
 .live{
     background: #FFFFFF;
     border:solid 2px #E9E9E9;
-    /*width: ;*/
     height: 485px;
 }
 
@@ -9,11 +8,62 @@
     margin: 25px 0 0 0;
     background: #FFFFFF;
     border:solid 2px #E9E9E9;
-    /*width: ;*/
     height: 320px;
 }
 
 .day{
     float: left;
     width: 400px;
+}
+
+.chart-area{
+    padding: 60px 0 0;
+}
+
+.axis{
+    fill: none;
+    stroke: #E9E9E9;
+    stroke-width: 1px;
+}
+
+.axis text {
+    fill: #5D5D5D;
+    stroke: none;
+    font-size: 21px;
+}
+
+.zero{
+    fill: #5D5D5D;
+    font-size: 21px;
+}
+
+.now-text{
+    font: bold 20px Open Sans, sans-serif;
+    margin: 10px 0 0 85px;
+    float: left;
+}
+.update-text{
+    font: 100 20px Open Sans, sans-serif;
+    color: #C0C0C0;
+    margin: 10px 0 0 990px;
+}
+
+.rate{
+    position: absolute;
+    background-color: #51CEA6;
+    color: #FFFFFF;
+    width: 250px;
+    height: 100px;
+    margin: -10px 0 0 1030px;
+
+}
+
+.rate p{
+    margin: 15px 0 5px 30px;
+    font: 100 20px 'Quicksand', sans-serif;
+}
+.rate h2{
+    margin: 0;
+    text-align: center;
+    font: bold 36px Open Sans, sans-serif;
 }

@@ -3,6 +3,7 @@
  */
 ;(function(){
         'use strict';
+
     function SettingsCtrl(){
 
     }

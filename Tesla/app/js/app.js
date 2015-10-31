@@ -122,6 +122,8 @@
 
     angular.module('Tesla', [
         'ui.router',
+        'Tesla.d3Service',
+        'Tesla.3dDirective',
         'Tesla.dashboard',
         'Tesla.live',
         'Tesla.days',

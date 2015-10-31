@@ -1,6 +1,13 @@
 <div class="live">
-    <h1>Live Statistics (Energy Used)</h1>
-    <div class="chart_area">
 
+    <div class="rate">
+        <p>Energy Rate :</p>
+        <h2>kWh</h2>
+    </div>
+    <h1>Live Statistics (Energy Used)</h1>
+    <div class="chart-area">
+        <d3-bars data="data"></d3-bars>
+        <p class="now-text">Now</p>
+        <p class="update-text">note : update every 1 second</p>
     </div>
 </div>

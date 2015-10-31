@@ -2,6 +2,7 @@
  * Created by Dima on 22.10.2015.
  */
 ;(function(){
+    'use strict';
 
     AuthService.$inject = ['$timeout', '$filter', '$q'];
     function AuthService($timeout, $filter, $q){
