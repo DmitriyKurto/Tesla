@@ -30,3 +30,12 @@
 .dataForm{
     margin: 15px 0;
 }
+
+.data button{
+    display:inline-block;
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color:  #44B449;
+    color: #FFFFFF;
+}

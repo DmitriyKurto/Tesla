@@ -13,13 +13,16 @@
                views: {
                    '': {templateUrl: 'pages/dashboard.html'},
                     'info@dashboard': {
-                        templateUrl: 'pages/dashboard-quick-info.html'},
-
+                        templateUrl: 'pages/dashboard-quick-info.html',
+                        controller: 'DashboardQuickInfoCtrl as vm'
+                    },
                     'battery@dashboard': {
                         templateUrl: 'pages/dashboard-battery-info.html',
-                        controller: 'DashboardCtrl as vm'
+                        controller: 'DashboardBatteryCtrl as vm'
                     },
-                    'charge@dashboard': {templateUrl: 'pages/dashboard-charge.html'}
+                    'charge@dashboard': {templateUrl: 'pages/dashboard-charge.html',
+                        controller: 'DashboardChargeCtrl as vm'
+                    }
                 }
             })
             .state('statistics', {
@@ -122,9 +125,17 @@
 
     angular.module('Tesla', [
         'ui.router',
+        'Tesla.modalDialog',
+        'Tesla.quickInfo',
         'Tesla.d3Service',
-        'Tesla.3dDirective',
-        'Tesla.dashboard',
+        'Tesla.d3DirectiveChargingArc',
+        'Tesla.d3DirectiveChargingGraph',
+        'Tesla.d3DirectiveLive',
+        'Tesla.d3DirectiveToday',
+        'Tesla.d3DirectiveYesterday',
+        'Tesla.d3DirectiveWeek',
+        'Tesla.dashboardBattery',
+        'Tesla.dashboardCharge',
         'Tesla.live',
         'Tesla.days',
         'Tesla.counter',

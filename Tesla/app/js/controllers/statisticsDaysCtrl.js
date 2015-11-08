@@ -9,5 +9,5 @@
     }
 
     angular.module('Tesla.days',[])
-        .controller('StatisticsDaysCtrl',StatisticsDaysCtrl)
+        .controller('StatisticsDaysCtrl', StatisticsDaysCtrl)
 }());

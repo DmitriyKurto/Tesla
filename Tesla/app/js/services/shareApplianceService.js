@@ -5,10 +5,9 @@
     'use strict';
 
     function ShareAppliance($localStorage){
-        var vm = this;
 
-        vm.appliances = $localStorage.getObject('Appliances');
-        $localStorage.setObject('Appliances', vm.appliances);
+        this.appliances = $localStorage.getObject('Appliances');
+        $localStorage.setObject('Appliances', this.appliances);
     }
 
     angular.module('Tesla.shareAppliance',[])

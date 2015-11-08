@@ -1,9 +1,7 @@
-
 .settings-menu{
     background: #FFFFFF;
     border:solid 2px #E9E9E9;
     width: 385px;
-    /*height: 300px;*/
     float: left;
 }
 
@@ -55,4 +53,8 @@
     border: none;
     margin: 40px 60px;
     cursor: pointer;
+}
+
+.settings p{
+    margin: 0 60px 40px;
 }

@@ -1,0 +1,36 @@
+{
+  "name": "ng-modal",
+  "main": "index.js",
+  "homepage": "https://github.com/zzmp/modal",
+  "authors": [
+    "zzmp <zmp@umich.edu>"
+  ],
+  "description": "Modals, the Angular way.",
+  "keywords": [
+    "angular",
+    "ng",
+    "modal"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.21"
+  },
+  "_release": "5316d4026a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5316d4026ae5c4414de06279ee205983b167b5b9"
+  },
+  "_source": "git://github.com/zzmp/modal.git",
+  "_target": "*",
+  "_originalSource": "ngmodal",
+  "_direct": true
+}

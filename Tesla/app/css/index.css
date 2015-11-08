@@ -45,6 +45,10 @@ body{
     padding: 20px 58px 10px 58px;
 }
 
+.main-menu .a-last{
+    border-right: none;
+    padding-right: 0;
+}
 .main-menu a:hover img{
     opacity: 1;
 }

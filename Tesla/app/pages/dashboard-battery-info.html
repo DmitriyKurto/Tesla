@@ -2,7 +2,7 @@
     <h3>Battery Information</h3>
     <p class="amount-battery">You Have {{vm.powerwall.number}} Installed Powerwall. Total Power {{vm.powerwall.power * vm.powerwall.number}} kWh</p>
     <div class="battery1">
-        <img src="img/battery1.png">
+        <img ng-dblclick='vm.toggleModal()' src="img/battery1.png">
         <p class="power">Powerwall {{vm.powerwall.power}}kWh v.1</p>
         <div class="status">
             <p><img src="img/on.png">{{vm.powerwall.status}}</p>
@@ -27,5 +27,18 @@
             <p>Normal 30&degC</p>
         </div>
     </div>
-    <div class="tap"><img src="img/hand.png"><p>Double Tap Each Battery To Get Specific Information</p></div>
+    <div class="tap">
+        <img src="img/hand.png">
+        <p>Double Tap Each Battery To Get Specific Information</p>
+    </div>
 </div>
+<modal-dialog show='vm.modalShown' width='350px' height='250px'>
+    <p>Powerwall Specific Information<p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Cras vehicula bibendum ligula sit amet vulputate.
+    Pellentesque quis risus quis eros vulputate volutpat.
+    Ut vel consectetur massa, vitae dignissim ligula.
+    Morbi non consequat quam, ac auctor quam.
+    Morbi euismod tempor orci, vel gravida dui venenatis sed.
+    Donec et condimentum purus. Sed in orci commodo orci posuere aliquet vel non dui. </p>
+</modal-dialog>

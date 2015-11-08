@@ -4,7 +4,6 @@
     background: #FFFFFF;
     border: solid 2px #E9E9E9;
     float: left;
-
 }
 
 .total{
@@ -49,12 +48,13 @@
 
 .add input{
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
 }
 .add .bottom{
     margin: 50px 0;
+    text-align: center;
 }
 .bottom a{
     text-decoration: none;
@@ -72,7 +72,7 @@
 .list{
     width: 890px;
     background: #FFFFFF;
-    margin: 0 0 0 410px;
+    margin: 0 25px 0 410px;
     border:solid 2px #E9E9E9;
 }
 .list ul{

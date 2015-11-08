@@ -4,16 +4,16 @@
         <div>
             <label>Name</label>
             <br>
-            <input type="text" name='name' ng-model="vm.appliances.name" placeholder="Enter name your new devices" required>
+            <input type="text" name='name' ng-model="vm.appliances.name" placeholder="Enter name your new devices" required/>
         </div>
        <div>
            <label>Power</label>
            <br>
-           <input type="number" name='power' ng-model="vm.appliances.power" placeholder="Enter power your new devices" required>
+           <input type="number" name='power' ng-model="vm.appliances.power" placeholder="Enter power your new devices" required/>
        </div>
-        <div class="bottom">
-            <a ui-sref="appliance" class="btn">Cancel</a>
-            <button type="submit" ng-click="vm.addAppliance()">Save</button>
-        </div>
     </form>
+    <div class="bottom">
+        <a ui-sref="appliance" class="btn">Cancel</a>
+        <button type="submit" ng-click="vm.addAppliance(addForm)">Save</button>
+    </div>
 </div>

@@ -4,12 +4,11 @@
 ;(function(){
     'use strict';
 
-    function StatisticsLiveCtrl(){
-
-
-
+    function StatisticsLiveCtrl(d3Service) {
+        var vm = this;
+        vm.sumPower = d3Service.sum();
     }
 
     angular.module('Tesla.live',[])
-        .controller('StatisticsLiveCtrl',StatisticsLiveCtrl)
+        .controller('StatisticsLiveCtrl', StatisticsLiveCtrl)
 }());

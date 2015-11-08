@@ -1,10 +1,8 @@
 <div class="choice-charge">
     <h3>Power Used To Charge The Battery</h3>
     <div class="btn-row">
-
-            <button class="btn-grid"><img src="img/grid.png"></button>
-            <button class="btn-solar"><img src="img/panel.png"></button>
-
+        <button id="gridId" ng-click="vm.charge(0)" class="btn-grid"><img src="img/gridOff.png" name="grid"></button>
+        <button id="panelId" ng-click="vm.charge(1)" class="btn-solar"><img src="img/panelOn.png" name="panel"></button>
     </div>
 
     <div class="tap">

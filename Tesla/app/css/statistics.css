@@ -12,15 +12,24 @@
 }
 
 .day{
+    margin: 10px 0 0 0;
+    height: 300px;
     float: left;
-    width: 400px;
+    width: 430px;
+    border-right: solid 1px #F3F3F3;
 }
 
+.day:last-child{
+    border-right: none;
+}
+.day h1{
+    padding-top: 15px;
+}
 .chart-area{
     padding: 60px 0 0;
 }
 
-.axis{
+.chart-area .axis{
     fill: none;
     stroke: #E9E9E9;
     stroke-width: 1px;
@@ -39,7 +48,7 @@
 
 .now-text{
     font: bold 20px Open Sans, sans-serif;
-    margin: 10px 0 0 85px;
+    margin: 0 0 0 85px;
     float: left;
 }
 .update-text{
@@ -55,7 +64,6 @@
     width: 250px;
     height: 100px;
     margin: -10px 0 0 1030px;
-
 }
 
 .rate p{
@@ -66,4 +74,20 @@
     margin: 0;
     text-align: center;
     font: bold 36px Open Sans, sans-serif;
+}
+
+.area {
+    fill: #51CEA6;
+    stroke: #219C74;
+    stroke-width: 2;
+}
+
+.graph{
+    margin: 15px 25px 115px;
+}
+
+.days .axis{
+    fill: none;
+    stroke: #E9E9E9;
+    stroke-width: 1px;
 }

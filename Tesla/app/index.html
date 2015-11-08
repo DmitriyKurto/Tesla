@@ -11,6 +11,7 @@
     <link href="css/data.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 <div>
@@ -22,7 +23,7 @@
                 <li><a ui-sref="statistics"><img src="img/statistics.png">Statistics</a></li>
                 <li><a ui-sref="appliance"><img src="img/appliance.png">Appliance</a></li>
                 <li><a ui-sref="settings"><img src="img/settings.png"> Settings</a></li>
-                <li><a ui-sref="data"><img src="img/data.png">Data</a></li>
+                <li><a ui-sref="data" class="a-last"><img src="img/data.png">New Data</a></li>
             </ul>
         </nav>
     </header>
@@ -35,8 +36,11 @@
 
 <script src="../../bower_components/d3/d3.js"></script>
 
+
 <script src="js/app.js"></script>
-<script src="js/controllers/dashboardCtrl.js"></script>
+<script src="js/controllers/dashboardBatteryCtrl.js"></script>
+<script src="js/controllers/dashboardQuickInfoCtrl.js"></script>
+<script src="js/controllers/dashboardChargeCtrl.js"></script>
 <script src="js/controllers/statisticsLiveCtrl.js"></script>
 <script src="js/controllers/statisticsDaysCtrl.js"></script>
 <script src="js/controllers/applianceCounterCtrl.js"></script>
@@ -51,6 +55,12 @@
 <script src="js/services/localStorageService.js"></script>
 <script src="js/services/authentication.js"></script>
 
-<script src="js/directives/d3Directive.js"></script>
+<script src="js/directives/dashboardModalDialog.js"></script>
+<script src="js/directives/d3DirectiveChargingArc.js"></script>
+<script src="js/directives/d3DirectiveChargingGraph.js"></script>
+<script src="js/directives/d3DirectiveLive.js"></script>
+<script src="js/directives/d3DirectiveToday.js"></script>
+<script src="js/directives/d3DirectiveYesterday.js"></script>
+<script src="js/directives/d3DirectiveWeek.js"></script>
 </body>
 </html>
