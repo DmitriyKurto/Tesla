@@ -1,14 +1,26 @@
+* {
+    margin: 0;
+}
+
 body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #F3F3F3;
+}
+
+#wrapper {
     margin: 0 auto;
     width: 1366px;
 }
+
 header{
     height: 112px;
     overflow: hidden;
+    width: 100%;
+    position: relative;
 }
-body{
-    background: #F3F3F3;
-}
+
 .logo{
     float: left;
     background: #FFFFFF;
