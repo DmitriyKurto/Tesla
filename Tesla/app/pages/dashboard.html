@@ -1,9 +1,12 @@
-<div class="left-panel">
-    <div ui-view="info"></div>
-    <div ui-view="charge"></div>
+<div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-5">
+            <div class="row">
+                <div ui-view="info" class="col-xs-12 col-md-7 col-lg-12"></div>
+                <div ui-view="charge" class="col-xs-12 col-md-5 col-lg-12"></div>
+            </div>
+        </div>
+        <div ui-view="battery" class="col-xs-12 col-md-12 col-lg-7">
+        </div>
 </div>
-<div ui-view="battery"></div>
-
-
 
 

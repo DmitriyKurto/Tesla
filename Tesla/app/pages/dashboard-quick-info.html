@@ -1,13 +1,18 @@
-<!--<div class="left-panel"> -->
 <div class="chart">
     <h3>Quick information</h3>
-    <div class="time">
-        <p>{{vm.time}}</p>
-        <div class="arc">
-        <d3-charging-arc></d3-charging-arc>
+    <div class="row">
+        <div class="col-xs-5 col-md-5 col-lg-5 time">
+            <p>{{vm.time}}</p>
+        </div>
+        <div class="col-xs-6 col-md-6 col-lg-6 arc">
+            <d3-charging-arc></d3-charging-arc>
         </div>
     </div>
-    <div class="graph-charging">
-        <d3-charging-graph></d3-charging-graph>
+    <div class="row  graph-charging">
+        <div class="col-xs-12">
+            <d3-charging-graph></d3-charging-graph>
+        </div>
     </div>
 </div>
+
+

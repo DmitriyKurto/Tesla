@@ -1,16 +1,23 @@
 <div class="settings">
     <h1>Battery Access Account</h1>
-    <form name='loginForm' ng-submit="vm.login()">
-        <div class="userName">
-            <label for="username">Username<input id="username" type="text" required/></label>
+    <form class="form-horizontal" name='loginForm' ng-submit="vm.login()">
+        <div class="form-group">
+            <label for="username" id="username" class="col-xs-3 control-label">Username</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" placeholder="Enter Username" required/>
+            </div>
         </div>
-        <div class="password">
-        <label for="password">Password  <input id="password" type="password" required/></label>
+        <div class="form-group">
+            <label for="password" class="col-xs-3 control-label">Password</label>
+            <div class="col-xs-9">
+                <input type="text" id="password" class="form-control" placeholder="Enter Password" required/>
+            </div>
         </div>
-        <!--<div ng-show="vm.error" class="alert alert-danger">{{vm.error}}</div>-->
-
-
-        <button ng-disabled='loginForm.$invalid'>Login</button>
-        <a ui-sref=".register">Register</a>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <button ng-disabled='loginForm.$invalid'>Login</button>
+                <a ui-sref=".register">Register</a>
+            </div>
+        </div>
     </form>
 </div>

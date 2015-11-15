@@ -1,8 +1,8 @@
 <div class="list">
 <h1>List of Appliances</h1>
-    <ul>
-        <li ng-repeat="appliance in vm.appliances track by $index" class="row">
-            <p>{{$index + 1}}. {{appliance.name}} {{appliance.power}}
+    <ul class="list-group">
+        <li ng-repeat="appliance in vm.appliances track by $index" class="list-group-item">
+            <p>{{$index + 1}}. {{appliance.name}} {{appliance.power}} kWh
                 <button type="button" class="btn-delete" aria-hidden="true" ng-click="vm.deleteAppliance($index)">x</button></p>
         </li>
     </ul>

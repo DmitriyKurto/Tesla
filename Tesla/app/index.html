@@ -2,7 +2,9 @@
 <html lang="en" ng-app="Tesla">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tesla Power Wall</title>
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
     <link href="css/statistics.css" rel="stylesheet">
@@ -14,26 +16,41 @@
 
 </head>
 <body>
-<div id="wrapper">
-    <header>
-        <div class="logo"><a ui-sref="dashboard"><img src="img/logo.png" alt="Tesla logo"></a></div>
-        <nav class="main-menu">
-            <ul>
-                <li><a ui-sref="dashboard"><img src="img/dashboard.png">Dashboard</a></li>
-                <li><a ui-sref="statistics"><img src="img/statistics.png">Statistics</a></li>
-                <li><a ui-sref="appliance"><img src="img/appliance.png">Appliance</a></li>
-                <li><a ui-sref="settings"><img src="img/settings.png"> Settings</a></li>
-                <li><a ui-sref="data" class="a-last"><img src="img/data.png">New Data</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main ui-view>
-    </main>
-</div>
+    <div class="wrapper container">
+        <header>
+            <nav role="navigation" class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Open menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a ui-sref="dashboard" class="navbar-brand">
+                        <img src="img/logo.png" alt="Tesla logo">
+                    </a>
+                </div>
+                 <div class="collapse navbar-collapse navbar-inverse-collapse">
+                     <ul class="nav navbar-nav">
+                         <li><a ui-sref="dashboard"><img src="img/dashboard.png">Dashboard</a></li>
+                         <li><a ui-sref="statistics"><img src="img/statistics.png">Statistics</a></li>
+                         <li><a ui-sref="appliance"><img src="img/appliance.png">Appliance</a></li>
+                         <li><a ui-sref="settings"><img src="img/settings.png">Settings</a></li>
+                         <li><a ui-sref="data"><img src="img/data.png">New Data</a></li>
+                     </ul>
+                 </div>
+            </nav>
+        </header>
+        <main ui-view>
+        </main>
+    </div>
 
 <script src="../../bower_components/angular/angular.js"></script>
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-
 <script src="../../bower_components/d3/d3.js"></script>
 
 

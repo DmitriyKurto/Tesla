@@ -1,11 +1,9 @@
 .counter {
-    width: 385px;
     height: 390px;
     background: #FFFFFF;
     border: solid 2px #E9E9E9;
-    float: left;
+    margin-bottom: 20px;
 }
-
 .total{
     text-align: center;
     border-bottom: 2px solid #F1F1F1;
@@ -30,15 +28,15 @@
     margin: 30px 0 0 0;
 }
 .add{
-    width: 385px;
     height: 390px;
     background: #FFFFFF;
     border: solid 2px #E9E9E9;
-    float: left;
+    margin-bottom: 20px;
 }
 .add form{
     text-align: center;
 }
+
 .add label{
     display: block;
     margin: 30px 0 10px 0;
@@ -47,13 +45,13 @@
 }
 
 .add input{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    border-top: 0;
+    margin: auto;
+    width: 57%;
     border-right: 0;
     border-left: 0;
 }
 .add .bottom{
-    margin: 50px 0;
+    margin-top: 30px;
     text-align: center;
 }
 .bottom a{
@@ -70,38 +68,29 @@
     color: #FFFFFF;
 }
 .list{
-    width: 890px;
     background: #FFFFFF;
-    margin: 0 25px 0 410px;
-    border:solid 2px #E9E9E9;
-}
-.list ul{
-    list-style-type: none;
+    margin-bottom: 20px;
 }
 .list p{
     color: #858585;
 }
-
 h1{
     margin: 0;
     padding: 25px 0 0 25px;
     color: #919191;
     font: 100 18px Open Sans, sans-serif;
 }
-
-.row{
-    border-top: 2px solid #E9E9E9;
-}
-
 .btn-delete{
-    margin-top: -5px;
     background: transparent;
     border: none;
-    float: right!important;
+    float: right;
     cursor: pointer;
     opacity: .2;
     font: bold 21px Arial;
 }
 .btn-delete:hover{
     opacity: 1;
+}
+.list-group{
+    margin-top: 30px;
 }

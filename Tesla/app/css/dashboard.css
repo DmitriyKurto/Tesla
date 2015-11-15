@@ -4,23 +4,11 @@ h3{
     color: #919191;
     font: 100 18px Open Sans, sans-serif;
 }
-main{
-    margin: 30px 30px 25px;
-}
-.chart{
-    width: 510px;
-    height: 505px;
-    background: #FFFFFF;
-    border:solid 2px #E9E9E9;
-}
 .choice-charge{
-    width: 510px;
-    height: 320px;
+    margin-bottom: 20px;
     background: #FFFFFF;
-    margin: 25px 0 0;
     border:solid 2px #E9E9E9;
 }
-
 .choice-charge button{
     width: 220px;
     height: 126px;
@@ -28,53 +16,43 @@ main{
     border-radius: 5px;
     cursor: pointer;
 }
-
 .btn-row{
-    margin: 30px 10px 25px 25px;
-}
-.btn-grid{
-    background: #FFFFFF;
-    color: #787878;
-    margin: 0 14px 0 0;
+    margin: 0 auto 35px;
     text-align: center;
 }
+.btn-grid{
+    margin-top: 35px;
+    background: #FFFFFF;
+    color: #787878;
+}
 .btn-solar{
+    margin-top: 35px;
     background: #656565;
     color: #FFFFFF;
 }
-
 .tap{
-    height: 73px;
     margin: 0;
     border-top: solid 2px #E8E8E8;
     background: #F9F9F9;
-    padding: 15px 0 0 65px;
+    padding: 15px 0 15px 65px;
 }
-
 .tap img{
     float: left;
 }
-
 .tap p{
-    margin: 20px 0 0 70px;
+    margin: 15px auto 0 auto;
     font: 100 20px Open Sans, sans-serif;
     color: #A2A2A2;
-}
-
-.left-panel{
-    float: left;
+    padding: 0 40px;
+    text-align: center;
 }
 .battery-info{
-    width: 765px;
-    height: 853px;
+    margin-bottom: 20px;
     background: #FFFFFF;
-
-    margin: 0 0 0 535px;
     border:solid 2px #E9E9E9;
 }
-
 .amount-battery{
-    margin: 20px 25px;
+    margin: 30px 25px;
     padding: 15px 30px;
     border: solid 2px #E9EDD4;
     border-radius: 7px;
@@ -82,90 +60,80 @@ main{
     font: 100 20px Open Sans, sans-serif;
     color: #80807B;
 }
-
 .battery1{
-    float: left;
     padding: 10px 0 0 0;
-    width: 385px;
     text-align: center;
     border-right: solid 2px #ECECEC;
-    margin: 0 0 21px 0;
+    margin: 0 0 23px 0;
 }
-
 .power{
     font: 100 20px Open Sans, sans-serif;
     color: #B9B9B9;
     margin: 23px 0;
 }
-
 .status img{
     padding-right: 8px;
 }
-
 .status p{
     font: 100 23px Open Sans, sans-serif;
     color: #A1A1A1;
+    margin-bottom: 21px;
 }
-
-
 .charge-line p{
     color: #929292;
-    font: 100 23px Open Sans, sans-serif;;
+    font: 100 23px Open Sans, sans-serif;
+    margin-bottom: 21px;
 }
-
 .temp p{
     color: #148EC3;
     font: 100 23px Open Sans, sans-serif;
+    margin-bottom: 21px;
 }
-
-.temp img{
-    padding: 2px 8px 0 0;
-}
-
 .battery2{
     text-align: center;
     padding: 10px 0 0 0;
-    margin: 0 0 21px 0;
-    overflow: hidden;
+    margin: 0 0 23px 0;
 }
-
+.chart{
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border:solid 2px #E9E9E9;
+}
 .arc{
-    margin: 0 0 25px 220px;
+    text-align: center;
+    margin: 15px auto 6px;
 }
-
 .percent{
     fill: #52CEA6;
     font-size: 50px;
     font-weight: bold;
 }
-
 .status{
     font-size: 25px;
     fill: #52CEA6;
 }
-
 .time{
-    margin: 20px 25px 5px 25px;
-    border-bottom: solid 2px #E8E8E8;
+    margin: 50px auto 0;
 }
 .time p{
-    float: left;
-    margin: 50px 0 0 45px;
+    text-align: right;
     font: normal 50px 'Open Sans', sans-serif;
-    border-bottom: solid 1px #F6F6F6;
     color: #4A4C54;
 }
 
+.graph-charging {
+    text-align: center;
+    border-top: solid 2px #E8E8E8;
+    padding-top: 10px;
+    margin: 10px 20px;
+}
 .graph-charging .axis text{
     fill: #A5A5A5;
     font-size: 20px;
 }
-
 .battery1 img{
     cursor: pointer;
 }
-
-
 .ng-modal-overlay {
     position: fixed;
     z-index: 9999;
@@ -180,7 +148,6 @@ main{
     z-index: 10000;
     position: fixed;
     width: 50%;
-
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

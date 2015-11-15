@@ -5,8 +5,9 @@
     'use strict';
 
     function d3GraphToday(){
-        var height = 150;
-        var width = 355;
+        var margin = {top: 20, right: 20, bottom: 30, left: 20},
+            height = 200 - margin.top - margin.bottom,
+            width = 390 - margin.left - margin.right;
 
         var dataToday = [{time:0, power: 2},
             {time:1, power: 1},
@@ -46,9 +47,10 @@
             link: function (scope, ele) {
 
                 var svg = d3.select(ele[0])
-                    .append('svg')
-                    .attr("height", height+40)
-                    .style('width', width+20);
+                    .append("svg")
+                    .attr("height", height + margin.bottom + margin.bottom)
+                    .attr("width", "100%")
+                    .attr("viewBox", "0 0 390 200");
 
                 var valueline = d3.svg.area()
                     .x(function (d) {
@@ -70,7 +72,7 @@
                     .call(xAxis);
 
                 svg.select("text",":first-child")
-                    .attr("x",20);
+                    .attr("x", 10);
             }
         }
     }

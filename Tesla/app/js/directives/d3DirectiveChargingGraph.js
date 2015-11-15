@@ -28,8 +28,8 @@
             .range([width, 0]);
 
         var yScale = d3.scale.linear()
-                .domain(d3.extent(data, function(d) {return d.power}))
-                .range([height, 0]);
+            .domain(d3.extent(data, function(d) {return d.power}))
+            .range([height, 0]);
 
         var xAxis = d3.svg.axis()
             .scale(xScale)
@@ -47,7 +47,8 @@
                 var svg = d3.select(ele[0])
                     .append("svg")
                     .attr("height", height + margin.top + margin.bottom)
-                    .attr("width", width + margin.left + margin.right)
+                    .attr("width", "100%")
+                    .attr("viewBox", "0 0 500 160")
                     .append("g")
                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 

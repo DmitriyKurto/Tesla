@@ -1,36 +1,17 @@
 .data{
     background: #FFFFFF;
     border:solid 2px #E9E9E9;
-    /*width: ;*/
-    height: 300px;
+    margin-bottom: 20px;
 }
-
 .data h1{
     margin: 0;
-    padding: 25px 0 0 25px;
+    padding: 25px 0 25px 25px;
     color: #919191;
     font: 100 18px Open Sans, sans-serif;
 }
-
-.question{
-    float: left;
-    width: 330px;
-
+.data .form-control{
+    width: 70%;
 }
-.question p{
-    margin: 10px 0 10px 60px;
-    font: 100 20px Open Sans, sans-serif;
-    color: #A2A2A2;
-}
-
-.dataForm input{
-    display: block;
-    margin: 15px;
-}
-.dataForm{
-    margin: 15px 0;
-}
-
 .data button{
     display:inline-block;
     width: 100px;

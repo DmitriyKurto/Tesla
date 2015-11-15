@@ -1,25 +1,47 @@
-<div class="data">
-<h1> Please enter your information</h1>
-   <div class="question">
-       <p>The number of powerwall</p>
-       <p>Power powerwall</p>
-       <p>Status</p>
-       <p>Capacity</p>
-       <p>Temperature</p>
-   </div>
-    <div class="dataForm">
-        <label><input type="number" ng-model="vm.powerwall.number"></label>
-        <label><input type="number" ng-model="vm.powerwall.power"></label>
-        <label>
-            <select ng-model="vm.powerwall.status">
-                <option value="Active">Active</option>
-                <option value="Passive">Passive</option>
-            </select>
-        </label>
-        <label><input type="number" ng-model="vm.powerwall.capacity"></label>
-        <label><input type="number" ng-model="vm.powerwall.temperature"></label>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="data">
+            <h1> Please enter your information</h1>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <lablel class="col-xs-3 control-label">The number of powerwall</lablel>
+                    <div class="col-xs-9">
+                        <input type="number" ng-model="vm.powerwall.number" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <lablel class="col-xs-3 control-label">Power powerwall</lablel>
+                    <div class="col-xs-9">
+                        <input type="number" ng-model="vm.powerwall.power" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <lablel class="col-xs-3 control-label">Status</lablel>
+                    <div class="col-xs-9">
+                        <select ng-model="vm.powerwall.status" class="form-control">
+                            <option value="Active">Active</option>
+                            <option value="Passive">Passive</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <lablel class="col-xs-3 control-label">Capacity</lablel>
+                    <div class="col-xs-9">
+                        <input type="number" ng-model="vm.powerwall.capacity" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <lablel class="col-xs-3 control-label">Temperature</lablel>
+                    <div class="col-xs-9">
+                        <input type="number" ng-model="vm.powerwall.temperature" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-3 col-xs-9">
+                        <button ng-click="vm.save()">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-
-       <button class="btn-save" ng-click="vm.save()">Save</button>
-
 </div>

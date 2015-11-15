@@ -25,11 +25,7 @@
         var yScale = d3.scale.linear()
             .domain([0, d3Service.sum()/10])
             .rangeRound([height-10, 0]);
-        /*
-         var yScale = d3.scale.linear()
-         .domain([0, d3.max(data, function(d) { return d; })])
-         .rangeRound([height, 0]);
-         */
+
         var xAxis = d3.svg.axis()
             .scale(xScale)
             .orient("bottom");
@@ -55,7 +51,9 @@
                 var svg = d3.select(ele[0])
                     .append('svg')
                     .attr("height", height)
-                    .style('width', '100%');
+                    .style('width', '100%')
+                    .attr("viewBox", "0 0 1302 310")
+                    .attr("preserveAspectRatio", "none");
 
                 svg.append("g")
                     .attr("class", "axis")
@@ -95,7 +93,6 @@
                     })
                     .attr('width', 10)
                     .attr('fill', "#E86986");
-
 
                 setInterval(function() {
                     data.shift();

@@ -1,10 +1,8 @@
 .settings-menu{
     background: #FFFFFF;
     border:solid 2px #E9E9E9;
-    width: 385px;
-    float: left;
+    margin-bottom: 20px;
 }
-
 .settings-menu ul{
     margin: 0;
     padding: 50px 0 30px 60px;
@@ -14,19 +12,18 @@
     list-style-type: none;
     padding: 0 0 30px;
 }
-
 .settings-menu a{
     text-decoration: none;
-   /* display: inline-block;*/
-
     font: 21px Open Sans, sans-serif;
     color: #D0D0D0;
 }
+.settings-menu a:hover{
+    color: #080808;
+}
 .settings{
-    margin: 0 0 0 410px;
-    width: 890px;
     background: #FFFFFF;
     border:solid 2px #E9E9E9;
+    margin-bottom: 20px;
 }
 .settings h1{
     margin: 0;
@@ -40,21 +37,22 @@
     padding: 0 0 0 60px;
 }
 .settings input{
-    margin: 0 0 0 100px;
+    width: 50%
 }
 .userName{
     margin: 0 0 40px;
 }
 .settings button{
-    width:  205px;
-    height: 80px;
-    background: #E41445;
+    width:  185px;
+    height: 70px;
+    background: #44B449;
     color: #FFFFFF;
     border: none;
-    margin: 40px 60px;
     cursor: pointer;
 }
-
+.settings a{
+    margin-left: 10%;
+}
 .settings p{
     margin: 0 60px 40px;
 }

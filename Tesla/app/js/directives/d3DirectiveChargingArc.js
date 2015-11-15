@@ -41,10 +41,8 @@
                 var meter = svg.append("g");
                     meter.append("text")
                         .attr("class", "percent")
-                       .attr("text-anchor", "middle")
-                      //  .attr("y", "20")
-
-                       .text(text);
+                        .attr("text-anchor", "middle")
+                        .text(text);
 
                 var status = svg.append("g");
                     status.append("text")
