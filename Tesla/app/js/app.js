@@ -5,13 +5,29 @@
     'use strict';
 
     function config($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise('dashboard');
+        // Init parse sdk
+        Parse.initialize(
+            'K5TZDOJlwJYaocVVBIFlI1Dna6qdVMAxQHut1aZ3',
+            'mFhIJ53lXI10xzpZKGuN4qqbH9YyiHluVh6R3fMW'
+        );
+
+        $urlRouterProvider.otherwise('enter');
 
         $stateProvider
+            .state('enter', {
+               url: '/enter',
+               templateUrl: 'pages/enter.html',
+               controller: 'EnterCtrl as vm'
+            })
+            .state('registry',{
+                url: '/registry',
+                templateUrl: 'pages/registry.html'
+            })
             .state('dashboard', {
-                url: '/dashboard',
+               url: '/dashboard',
                views: {
-                   '': {templateUrl: 'pages/dashboard.html'},
+                   '': {templateUrl: 'pages/dashboard.html'
+                   },
                     'info@dashboard': {
                         templateUrl: 'pages/dashboard-quick-info.html',
                         controller: 'DashboardQuickInfoCtrl as vm'
@@ -28,20 +44,23 @@
             .state('statistics', {
                 url: '/statistics',
                 views:{
-                    '': {templateUrl: 'pages/statistics.html'},
-                    'live@statistics': {templateUrl: 'pages/statistics-live.html',
-                    controller: 'StatisticsLiveCtrl as vm'},
-                    'days@statistics': {templateUrl: 'pages/statistics-days.html',
-                    controller: 'StatisticsDaysCtrl as vm'}
+                    '': {templateUrl: 'pages/statistics.html'
+                    },
+                    'live@statistics': {
+                        templateUrl: 'pages/statistics-live.html',
+                        controller: 'StatisticsLiveCtrl as vm'
+                    },
+                    'days@statistics': {
+                        templateUrl: 'pages/statistics-days.html',
+                        controller: 'StatisticsDaysCtrl as vm'
+                    }
                 }
-            }
-
-        )
+            })
             .state('appliance', {
                 url: '/appliance',
                 views: {
-
-                    '': {templateUrl: 'pages/appliance.html'},
+                    '': {templateUrl: 'pages/appliance.html'
+                    },
                     'counter@appliance': {
                         templateUrl: 'pages/appliance-counter.html',
                         controller: 'ApplianceCounterCtrl as vm'
@@ -64,16 +83,15 @@
             .state('settings',{
                 url:'/settings',
                 views:{
-                    '':{templateUrl: 'pages/settings.html'},
-                    'menu@settings': {templateUrl: 'pages/settings-menu.html'},
-                    '@settings': {templateUrl: 'pages/settings-account.html'},
-                    controller: 'AccountCtrl as vm'
+                    '':{templateUrl: 'pages/settings.html'
+                    },
+                    'menu@settings': {
+                        templateUrl: 'pages/settings-menu.html'
+                    },
+                    '@settings': {
+                        templateUrl: 'pages/settings-firmware.html'
+                    }
                 }
-            })
-            .state('settings.account',{
-                url:'/account',
-                templateUrl: 'pages/settings-account.html',
-                controller: 'AccountCtrl as vm'
             })
             .state('settings.firmware',{
                 url:'/firmware',
@@ -90,41 +108,53 @@
                 templateUrl: 'pages/data.html',
                 controller: 'DataCtrl as vm'
             })
-            .state('account',{
-                url:'/account',
-                templateUrl: 'pages/settings/account.html'
-            })
     }
 
-    function AppRun ($localStorage) {
+    function AppRun ($localStorage, $state, $rootScope) {
 
-            if (!$localStorage.get('Powerwall')) {
+        $rootScope.$state = $state;
 
-             var data = {
-                     number: 5,
-                     power: 5,
-                     status: 'Active',
-                     capacity: 5,
-                     temperature: 5
-             };
+        if (Parse.User.current()) {
+            $state.go('dashboard');
+        } else if (!Parse.User.current()) {
+            $state.go('enter');
+        }
 
-                $localStorage.setObject('Powerwall', data);
+        if (!$localStorage.get('Powerwall')) {
 
-            }
-            if (!$localStorage.get('Appliances')){
-                var appliance = [{
-                    name:'TV',
-                    power: 25
-                }, {
-                    name:'macBook',
-                    power: 7
-                }];
-                $localStorage.setObject('Appliances', appliance);
-            }
+         var data = {
+                 number: 2,
+                 power: 5,
+                 status: 'Active',
+                 capacity: 70,
+                 temperature: 60
+         };
+
+            $localStorage.setObject('Powerwall', data);
+
+        }
+        if (!$localStorage.get('Appliances')){
+            var appliance = [{
+                name:'TV',
+                power: 25
+            }, {
+                name:'macBook',
+                power: 7
+            }];
+            $localStorage.setObject('Appliances', appliance);
+        }
+    }
+
+    function AppCtrl(){
+        var vm = this;
+        vm.logout = function(){
+            Parse.User.logOut();
+        }
     }
 
     angular.module('Tesla', [
         'ui.router',
+        'Tesla.enter',
         'Tesla.modalDialog',
         'Tesla.quickInfo',
         'Tesla.d3Service',
@@ -143,12 +173,11 @@
         'Tesla.list',
         'Tesla.shareAppliance',
         'Tesla.settings',
-        'Tesla.account',
         'Tesla.authentication',
         'Tesla.data',
         'Tesla.localStorage'
     ])
         .run(AppRun)
-        .config(config,'config');
-
+        .config(config,'config')
+        .controller('AppCtrl', AppCtrl);
 }());

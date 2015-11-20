@@ -4,14 +4,19 @@
 ;(function(){
   'use strict';
 
-    function DashboardBatteryCtrl($localStorage){
+    function DashboardBatteryCtrl($localStorage, $User) {
         var vm = this;
         vm.powerwall = $localStorage.getObject('Powerwall');
 
         vm.modalShown = false;
         vm.toggleModal = function () {
             vm.modalShown = !vm.modalShown;
-        }
+        };
+
+        $User.getUserPowerwall($User.current())
+            .then( function (pw) {
+                console.log(pw.get('number'));
+            })
     }
 
     angular.module('Tesla.dashboardBattery',[])

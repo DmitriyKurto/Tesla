@@ -43,16 +43,56 @@
     margin: 0 0 40px;
 }
 .settings button{
-    width:  185px;
-    height: 70px;
+    height: 40px;
     background: #44B449;
     color: #FFFFFF;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+}
+.settings button:hover{
+    background: #4ED055;
 }
 .settings a{
     margin-left: 10%;
 }
 .settings p{
     margin: 0 60px 40px;
+}
+.img-responsive {
+    margin: 8% auto;
+}
+.settings .form-horizontal{
+    margin-bottom: 14%;
+}
+.sign{
+    text-align: center;
+}
+.sign a{
+    display: inline-block;
+    margin: 0 auto;
+}
+.registry p{
+    text-align: center;
+}
+.registry input{
+    margin: 0 auto;
+    width: 80%;
+}
+.registry .form-horizontal{
+    margin: 13% 0;
+}
+.registry button{
+    height: 40px;
+    background: #FF2857;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: .8;
+    display: block;
+    margin: 15px auto;
+}
+.registry button:hover {
+opacity: 1;
 }

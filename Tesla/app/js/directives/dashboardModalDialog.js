@@ -28,16 +28,6 @@
                 };
             },
             templateUrl: "pages/modal-dialog.html"
-            /*template: "<div class='ng-modal' ng-show='show'>" +
-            "<div class='ng-modal-overlay' ng-click='hideModal()'></div>" +
-            "<div class='ng-modal-dialog' ng-style='dialogStyle'>" +
-            "<span class='ng-modal-title' ng-show='dialogTitle && dialogTitle.length' ng-bind='dialogTitle'></span>" +
-            "<div class='ng-modal-close' ng-click='hideModal()'>X" +
-            "<div ng-bind-html='closeButtonHtml'></div>" +
-            "</div>" +
-            "<div class='ng-modal-dialog-content' ng-transclude></div>" +
-            "</div>" +
-            "</div>"*/
         }
     }
 

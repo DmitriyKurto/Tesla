@@ -7,20 +7,33 @@
     .navbar .nav img{
         display: none;
     }
+    .container {
+        min-width: 550px;
+    }
+}
+@media (min-width: 768px) {
+    .nav>li>a {
+        padding: 15px 8px;
+    }
 }
 @media (min-width: 992px) {
     .nav>li>a {
-        padding: 15px 37px;
+        padding: 15px 27px;
     }
 }
 @media (min-width: 1200px) {
     .nav>li>a {
-        padding: 15px 59px;
+        padding: 15px 45px;
+    }
+}
+@media (min-width: 1261px) {
+    .nav>li>a {
+        padding: 15px 50px;
     }
 }
 @media (min-width: 1380px) {
     .nav>li>a {
-        padding: 15px 77px;
+        padding: 15px 60px;
     }
 }
 .container {
@@ -37,7 +50,6 @@
     background-color: #393939;
     /*border-color: #27ae60;*/
 }
-
 .navbar-default .navbar-nav > li > a {
     color: #EBEBEB;
     opacity: 0.5;

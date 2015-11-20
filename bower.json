@@ -19,6 +19,6 @@
     "angular-ui-router": "~0.2.15",
     "d3": "~3.5.6",
     "bootstrap": "~3.3.5",
-    "jquery": "2.1.4"
+    "parse-js-sdk": "~1.4.2"
   }
 }

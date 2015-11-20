@@ -72,7 +72,12 @@
     margin-bottom: 20px;
 }
 .list p{
+    margin: 5px 0;
     color: #858585;
+}
+.list span{
+    float: right;
+    margin-right: 3%;
 }
 h1{
     margin: 0;
@@ -81,6 +86,7 @@ h1{
     font: 100 18px Open Sans, sans-serif;
 }
 .btn-delete{
+    margin-top: -3px;
     background: transparent;
     border: none;
     float: right;
