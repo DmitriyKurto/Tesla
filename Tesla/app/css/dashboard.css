@@ -131,7 +131,7 @@ h3{
     fill: #A5A5A5;
     font-size: 20px;
 }
-.battery1 img{
+.battery-img{
     cursor: pointer;
 }
 .ng-modal-overlay {
@@ -171,4 +171,8 @@ h3{
     display: inline-block;
     font-weight: bold;
     font-family: 'arial', 'sans-serif';
+}
+
+.warning p{
+    color: #FF0000;
 }

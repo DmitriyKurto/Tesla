@@ -8,6 +8,12 @@
         var vm = this;
         vm.powerwall = $localStorage.getObject('Powerwall');
 
+        if (vm.powerwall.temperature > 65){
+            vm.status = 'Hot ';
+        } else {
+            vm.status = 'Normal ';
+        }
+
         vm.modalShown = false;
         vm.toggleModal = function () {
             vm.modalShown = !vm.modalShown;

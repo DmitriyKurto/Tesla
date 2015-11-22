@@ -1,18 +1,19 @@
 <div class="battery-info">
     <h3>Battery Information</h3>
-    <p class="amount-battery">You Have {{vm.powerwall.number}} Installed Powerwall. Total Power {{vm.powerwall.power * vm.powerwall.number}} kWh</p>
+    <p class="amount-battery">You Have {{vm.powerwall.number}} Installed Powerwall. Total Power {{vm.powerwall.power * (vm.powerwall.number-1)+10}} kWh</p>
     <div class="row">
         <div class="col-xs-6 col-md-6 col-lg-6 battery1">
-            <img ng-dblclick='vm.toggleModal()' src="img/battery1.png">
+            <img ng-dblclick='vm.toggleModal()' src="img/battery1.png" class="battery-img">
             <p class="power">Powerwall {{vm.powerwall.power}}kWh v.1</p>
             <div class="status">
-                <p><img src="img/on.png">{{vm.powerwall.status}}</p>
+                <p><img ng-src="{{vm.powerwall.status == 'Active' ? 'img/on.png' : 'img/off.png'}}"/>{{vm.powerwall.status}}</p>
             </div>
-            <div class="charge-line">
+            <div class="charge-line" ng-class="vm.powerwall.capacity<10 ? 'warning' : 'none'">
+            <!--<div class="ng-class:vm.powerwall.capacity<10 ? 'warning':'none'; charge-line">-->
                 <p>Capacity {{vm.powerwall.capacity}}%</p>
             </div>
-            <div class="temp">
-                <p>Normal {{vm.powerwall.temperature}}&degC</p>
+            <div class="temp" ng-class="vm.powerwall.temperature>65 ? 'warning' : 'none'">
+                <p>{{vm.status}} {{vm.powerwall.temperature}}&degC</p>
             </div>
         </div>
         <div class="col-xs-6 col-md-6 col-lg-6 battery2">
