@@ -31,7 +31,12 @@
         padding: 15px 50px;
     }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1310px) {
+    .nav>li>a {
+        padding: 15px 55px;
+    }
+}
+@media (min-width: 1382px) {
     .nav>li>a {
         padding: 15px 60px;
     }

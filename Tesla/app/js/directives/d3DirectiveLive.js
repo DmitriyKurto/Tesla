@@ -4,19 +4,16 @@
 ;(function(){
     'use strict';
 
-    function d3Bars(d3Service){
+    function d3Bars(d3Service, $interval){
 
         var height = 310;
         var width = 1302;
         var padding = 110;
 
-
-        var  data = d3.range(69).map(next); // starting dataset
-        console.log(data);
+        var data = d3.range(69).map(next); // starting dataset
 
         function next() {
-            var v = d3Service.sum();
-            return (v * Math.random()/10).toFixed(1)
+            return (d3Service.sum() * Math.random()/10).toFixed(1)
         }
 
         var xScale = d3.scale.ordinal()
@@ -40,13 +37,14 @@
         function formatData(d) {
             return d + " kWh";
         }
+
         return {
             restrict: 'EA',
             replace: true,
-            scope: {
-                data: "="
-            },
+            scope: true,
             link: function(scope, ele) {
+
+                scope.dataToView = data[68];
 
                 var svg = d3.select(ele[0])
                     .append('svg')
@@ -94,13 +92,13 @@
                     .attr('width', 10)
                     .attr('fill', "#E86986");
 
-                setInterval(function() {
+                $interval(function() {
                     data.shift();
                     data.push(next());
                     redraw();
+                    scope.dataToView = data[68];
                     console.log(data)
-                }, 10000);
-
+                }, 5000);
 
                 function redraw() {
                     // Update…
