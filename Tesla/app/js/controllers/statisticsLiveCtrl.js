@@ -4,13 +4,8 @@
 ;(function(){
     'use strict';
 
-    function StatisticsLiveCtrl($scope) {
-        var vm = this;
-        //vm.sumPower = d3Service.sum();
+    function StatisticsLiveCtrl() {
 
-
-       // vm.rate = $scope.date[60];
-       // console.log(data[60]);
     }
 
     angular.module('Tesla.live',[])
