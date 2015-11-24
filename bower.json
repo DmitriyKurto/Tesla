@@ -20,5 +20,22 @@
     "d3": "~3.5.6",
     "bootstrap": "~3.3.5",
     "parse-js-sdk": "~1.4.2"
+  },
+  "overrides": {
+    "angular": {
+      "main": "./angular.min.js"
+    },
+    "angular-ui-router": {
+      "main": "./release/angular-ui-router.min.js"
+    },
+    "d3": {
+      "main": "./d3.min.js"
+    },
+    "bootstrap": {
+      "main": "./dist/css/bootstrap.css"
+    },
+    "parse-js-sdk": {
+      "main": "./lib/parse.min.js"
+    }
   }
 }

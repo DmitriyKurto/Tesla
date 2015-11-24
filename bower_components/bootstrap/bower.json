@@ -27,8 +27,5 @@
     "docs",
     "js/tests",
     "test-infra"
-  ],
-  "dependencies": {
-    "jquery": ">= 1.9.1"
-  }
+  ]
 }
