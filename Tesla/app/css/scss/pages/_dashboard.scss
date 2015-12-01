@@ -1,0 +1,127 @@
+@import "../utils/variables";
+
+.btn-row {
+  & {
+    margin: 0 auto 35px;
+    text-align: center;
+  }
+
+  button {
+    height: 126px;
+    width: 100%;
+    margin-top: 35px;
+    border: 3px solid #C1C1C1;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+.btn-grid {
+  background: $color-box-back;
+}
+.btn-solar {
+  background: $button-color-charge-active;
+}
+
+.amount-battery {
+  margin: 30px 25px;
+  padding: 15px 30px;
+  background: #F6FADF;
+  border: solid 2px #E9EDD4;
+  border-radius: 7px;
+  color: #80807B;
+  font: $font-size $font-stack;
+}
+
+.battery {
+  & {
+    margin: 0 0 24px;
+    padding: 11px 0 0;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 21px;
+    font: ($font-size + 3px) $font-stack;
+  }
+
+  .power {
+    margin: 23px 0;
+    color: #B9B9B9;
+    font: $font-size $font-stack;
+  }
+
+  .status {
+    & {
+      color: #A1A1A1;
+    }
+
+    img {
+      padding-right: 8px;
+    }
+  }
+
+  .charge-line {
+    color: #929292;
+  }
+
+  .temp {
+    color: #148EC3;
+  }
+
+  &:not(:last-child) {
+    border-right: 2px solid #ECECEC;
+  }
+}
+
+.quick-info {
+  & {
+    padding-bottom: 10px;
+  }
+
+  .arc {
+    & {
+      margin: 16px 0;
+      text-align: center;
+    }
+
+    .percent {
+      fill: $color-arc;
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .status {
+      fill: $color-arc;
+      font-size: 25px;
+    }
+  }
+
+  .time {
+    & {
+      margin: 50px 0 0;
+    }
+
+    p {
+      text-align: right;
+      color: $color-time;
+      font: ($font-size + 30px) $font-stack;
+    }
+  }
+  .graph-charging {
+    & {
+      margin: 0;
+      padding-top: 10px;
+      text-align: center;
+      border-top: 2px solid #ECECEC;
+    }
+
+    .axis text {
+      fill: #A5A5A5;
+      font-size: 20px;
+    }
+  }
+}
+
+.battery-img {
+  cursor: pointer;
+}

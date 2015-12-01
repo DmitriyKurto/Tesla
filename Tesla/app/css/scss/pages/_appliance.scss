@@ -1,0 +1,82 @@
+@import "../utils/variables";
+
+.counter {
+  a {
+    margin: 30px 0 0 0;
+    display: block;
+    color: #E42451;
+    text-align: center;
+    text-decoration: none;
+    font: $font-size $font-stack;
+  }
+}
+
+.total {
+  & {
+    text-align: center;
+    border-bottom: 2px solid #F1F1F1;
+  }
+
+  span {
+    height: 170px;
+    display: block;
+    color: #393939;
+    font: ($font-size + 130px) $font-stack;
+  }
+
+  p {
+    margin: 15px 0 40px 0;
+    color: #DADADA;
+    font: $font-size $font-stack;
+  }
+}
+
+.add {
+@extend .box;
+
+  form {
+    text-align: center;
+  }
+
+  label {
+    margin: 30px 0 10px 0;
+    display: block;
+    color: #4A4A4A;
+    font: $font-size $font-stack;
+  }
+
+  input {
+    width: 57%;
+    margin: 0 auto;
+  }
+}
+
+.bottom {
+  & {
+    margin-top: 30px;
+    text-align: center;
+  }
+  a {
+    color: #E42451;
+    text-decoration: none;
+    margin-right: 20%;
+  }
+}
+
+.list{
+  @extend .box;
+
+  p {
+    margin: 5px 0;
+    color: #858585;
+  }
+
+  span {
+    margin-right: 3%;
+    float: right;
+  }
+
+  .list-group {
+    margin-top: 30px;
+  }
+}

@@ -30,7 +30,7 @@ gulp.task('html', function(){
         .pipe(gulp.dest('dist'));
 });
 gulp.task('css', function(){
-    gulp.src('./Tesla/app/css/**/*.css')
+    gulp.src('./Tesla/app/css/*.css')
         .pipe(concat('styles.css'))
         //off because delete styles for d3.js
         //.pipe(uncss({

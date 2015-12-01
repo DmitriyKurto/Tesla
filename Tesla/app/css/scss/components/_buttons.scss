@@ -1,0 +1,33 @@
+@import "../utils/variables";
+
+.button {
+    & {
+      height: 40px;
+      width: 100px;
+      display: inline-block;
+      background-color: $button-color-back;
+      border: none;
+      border-radius: 5px;
+      color: $button-color;
+    }
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+}
+
+.btn-delete {
+  & {
+    float: right;
+    margin-top: -3px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.2;
+    font: bold 21px 'Arial';
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

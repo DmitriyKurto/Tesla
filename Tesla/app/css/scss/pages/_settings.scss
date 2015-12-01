@@ -1,0 +1,30 @@
+@import "../utils/variables";
+
+.settings-menu {
+@extend .box;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  li:not(:last-child) {
+    padding: 0 0 30px;
+  }
+
+  a {
+    & {
+      color: #D0D0D0;
+      text-decoration: none;
+      font: ($font-size + 1px) $font-stack;
+    }
+
+    &:hover {
+      color: #080808;
+    }
+  }
+}

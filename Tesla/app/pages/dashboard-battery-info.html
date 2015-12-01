@@ -1,8 +1,8 @@
-<div class="battery-info">
-    <h3>Battery Information</h3>
+<div class="box">
+    <h1>Battery Information</h1>
     <p class="amount-battery">You Have {{vm.powerwall.number}} Installed Powerwall. Total Power {{vm.powerwall.power * (vm.powerwall.number-1)+10}} kWh</p>
     <div class="row">
-        <div class="col-xs-6 col-md-6 col-lg-6 battery1">
+        <div class="col-xs-6 col-md-6 col-lg-6 battery">
             <img ng-dblclick='vm.toggleModal()' src="img/battery1.png" class="battery-img">
             <p class="power">Powerwall {{vm.powerwall.power}}kWh v.1</p>
             <div class="status">
@@ -16,7 +16,7 @@
                 <p>{{vm.status}} {{vm.powerwall.temperature}}&degC</p>
             </div>
         </div>
-        <div class="col-xs-6 col-md-6 col-lg-6 battery2">
+        <div class="col-xs-6 col-md-6 col-lg-6 battery">
             <img src="img/battery2.png">
             <p class="power">Powerwall 10kWh v.1</p>
             <div class="status">
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="row tap">
+    <div class="row box-tap">
         <img src="img/hand.png">
         <p>Double Tap Each Battery To Get Specific Information</p>
     </div>

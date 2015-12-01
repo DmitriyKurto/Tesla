@@ -1,0 +1,49 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.navbar-header {
+  & {
+    background-color: #FFFFFF;
+  }
+
+  .navbar-toggle {
+    margin-top: 30px;
+  }
+
+  .navbar-brand {
+    height: 109px;
+    padding: 18px 15px 10px;
+  }
+}
+.navbar-default {
+  & {
+    background-color: #393939;
+  }
+
+  .navbar-nav {
+    li > a {
+      & {
+        color: #EBEBEB;
+        opacity: 0.5;
+      }
+
+      &:hover {
+        @include menu-color;
+      };
+
+      &:active {
+        @include menu-color;
+      };
+
+      &:focus {
+        @include menu-color;
+      }
+    }
+
+    img {
+      margin: 0 auto;
+      padding-bottom: 10px;
+      display: block;
+    }
+  }
+}
