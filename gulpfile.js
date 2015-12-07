@@ -11,9 +11,9 @@ var gulp = require('gulp'),
 
 gulp.task('default', ['public', 'watch']);
 gulp.task('watch', function(){
-    gulp.watch('./Tesla/app/pages/**/*.html', ['html']);
-    gulp.watch('./Tesla/app/css/**/*.css', ['css']);
-    gulp.watch('./Tesla/app/js/**/*.js', ['js']);
+    gulp.watch('./app/pages/**/*.html', ['html']);
+    gulp.watch('./app/css/**/*.css', ['css']);
+    gulp.watch('./app/js/**/*.js', ['js']);
     gulp.watch('./Tesla/app/img/**/*.*', ['img']);
 });
 gulp.task('del', function () {
@@ -23,14 +23,14 @@ gulp.task('delfile', function () {
     return del('./dist/libs/bootstrap/dist/css/bootstrap.css');
 });
 gulp.task('html', function(){
-    gulp.src('./Tesla/app/pages/**/*.html')
+    gulp.src('./app/pages/**/*.html')
         .pipe(minHTML())
         .pipe(gulp.dest('./dist/pages'));
-    gulp.src('Tesla/app/index.html')
+    gulp.src('./app/index.html')
         .pipe(gulp.dest('dist'));
 });
 gulp.task('css', function(){
-    gulp.src('./Tesla/app/css/*.css')
+    gulp.src('./app/css/*.css')
         .pipe(concat('styles.css'))
         //off because delete styles for d3.js
         //.pipe(uncss({
@@ -41,14 +41,14 @@ gulp.task('css', function(){
         .pipe(gulp.dest('./dist/css'));
 });
 gulp.task('js', function(){
-    gulp.src('./Tesla/app/js/**/*.js')
+    gulp.src('./app/js/**/*.js')
         .pipe(concat('scripts.js'))
     //off because breaks Angular. Need to use the inference style of dependency annotation
         //.pipe(uglify())
         .pipe(gulp.dest('./dist/js'));
 });
 gulp.task('img', function(){
-    gulp.src('./Tesla/app/img/**/*.*')
+    gulp.src('./app/img/**/*.*')
         .pipe(gulp.dest('./dist/img'))
 });
 gulp.task('mainfiles', function() {
@@ -59,7 +59,7 @@ gulp.task('mainfiles', function() {
 gulp.task('minmain', ['mainfiles'], function(){
     gulp.src('./dist/libs/bootstrap/dist/css/bootstrap.css')
         .pipe(uncss({
-            html: ['./Tesla/app/index.html', './Tesla/app/pages/**/*.html']
+            html: ['./app/index.html', './Tesla/app/pages/**/*.html']
         }))
         .pipe(minCSS())
         .pipe(rename('bootstrap.min.css'))

@@ -1,0 +1,107 @@
+@import "../utils/_mixins";
+@import "../utils/_variables";
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1370px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar .nav img{
+    display: none;
+  }
+  .container {
+    min-width: 550px;
+  }
+}
+@media (min-width: 768px) {
+  .nav>li>a {
+    padding: 15px 8px;
+  }
+}
+@media (min-width: 992px) {
+  .nav>li>a {
+    padding: 15px 27px;
+  }
+}
+@media (min-width: 1200px) {
+  .nav>li>a {
+    padding: 15px 45px;
+  }
+}
+@media (min-width: 1261px) {
+  .nav>li>a {
+    padding: 15px 50px;
+  }
+}
+@media (min-width: 1310px) {
+  .nav>li>a {
+    padding: 15px 54px;
+  }
+}
+@media (min-width: 1382px) {
+  .nav>li>a {
+    padding: 15px 60px;
+  }
+}
+
+body {
+  background: $color-back;
+}
+
+h1{
+  margin: 0;
+  //padding: 25px 0 0 25px;
+  color: $color-h1;
+  font: $font-size-h1 $font-stack;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.box {
+  margin-bottom: 20px;
+  padding: 25px;
+  background: $color-box-back;
+  border: 2px solid #E9E9E9;
+}
+
+.box-tap {
+  & {
+    margin: 0 -25px -25px;
+    padding: 15px 0 15px 65px;
+    background: $color-box-tap-back;
+    border-top: 2px solid #E8E8E8;
+  }
+
+  img {
+    float: left;
+  }
+
+  p {
+    margin: 15px 0 0;
+    padding: 0 40px;
+    color: $color-tap;
+    text-align: center;
+    font: $font-size $font-stack;
+  }
+}
+
+.margin-bottom{
+  margin-bottom: 25px;
+}
+
+.axis {
+  & {
+    fill: none;
+    stroke: #E9E9E9;
+    stroke-width: 1px;
+  }
+
+  text {
+    fill: #5D5D5D;
+    stroke: none;
+    font-size: $font-size;
+  }
+}

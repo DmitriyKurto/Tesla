@@ -1,0 +1,70 @@
+@import "../utils/_variables";
+
+.enter {
+  & {
+  @extend .box;
+
+    width: 80%;
+    margin: 5% auto;
+    padding-bottom: 7%;
+  }
+
+  .logo-img {
+    margin: 7% auto;
+    display: block;
+  }
+
+  input {
+    width: 50%
+  }
+
+  button {
+    @extend .button;
+
+    width: 50%;
+  }
+}
+
+.sign {
+  & {
+    text-align: center;
+  }
+
+  a {
+    margin: 0 auto;
+    display: inline-block;
+  }
+}
+
+.registry {
+  .form-horizontal {
+    margin: 13% 0;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  input {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  button {
+    & {
+      height: 40px;
+      margin: 15px auto;
+      display: block;
+      background: #FF2857;
+      border: none;
+      border-radius: 5px;
+      color: #FFFFFF;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
