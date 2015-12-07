@@ -59,7 +59,7 @@ gulp.task('mainfiles', function() {
 gulp.task('minmain', ['mainfiles'], function(){
     gulp.src('./dist/libs/bootstrap/dist/css/bootstrap.css')
         .pipe(uncss({
-            html: ['./app/index.html', './Tesla/app/pages/**/*.html']
+            html: ['./app/index.html', './app/pages/**/*.html']
         }))
         .pipe(minCSS())
         .pipe(rename('bootstrap.min.css'))
