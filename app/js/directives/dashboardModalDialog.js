@@ -27,7 +27,7 @@
                     scope.show = false;
                 };
             },
-            templateUrl: "../../pages/modal-dialog.html"
+            templateUrl: "pages/modal-dialog.html"
         }
     }
 

@@ -16,27 +16,27 @@
         $stateProvider
             .state('enter', {
                url: '/enter',
-               templateUrl: '../pages/enter.html',
+               templateUrl: 'pages/enter.html',
                controller: 'EnterCtrl as vm'
             })
             .state('registry',{
                 url: '/registry',
-                templateUrl: '../pages/registry.html'
+                templateUrl: 'pages/registry.html'
             })
             .state('dashboard', {
                url: '/dashboard',
                views: {
-                   '': {templateUrl: '../pages/dashboard.html'
+                   '': {templateUrl: 'pages/dashboard.html'
                    },
                     'info@dashboard': {
-                        templateUrl: '../pages/dashboard-quick-info.html',
+                        templateUrl: 'pages/dashboard-quick-info.html',
                         controller: 'DashboardQuickInfoCtrl as vm'
                     },
                     'battery@dashboard': {
-                        templateUrl: '../pages/dashboard-battery-info.html',
+                        templateUrl: 'pages/dashboard-battery-info.html',
                         controller: 'DashboardBatteryCtrl as vm'
                     },
-                    'charge@dashboard': {templateUrl: '../pages/dashboard-charge.html',
+                    'charge@dashboard': {templateUrl: 'pages/dashboard-charge.html',
                         controller: 'DashboardChargeCtrl as vm'
                     }
                 }
@@ -44,14 +44,14 @@
             .state('statistics', {
                 url: '/statistics',
                 views:{
-                    '': {templateUrl: '../pages/statistics.html'
+                    '': {templateUrl: 'pages/statistics.html'
                     },
                     'live@statistics': {
-                        templateUrl: '../pages/statistics-live.html',
+                        templateUrl: 'pages/statistics-live.html',
                         controller: 'StatisticsLiveCtrl as vm'
                     },
                     'days@statistics': {
-                        templateUrl: '../pages/statistics-days.html',
+                        templateUrl: 'pages/statistics-days.html',
                         controller: 'StatisticsDaysCtrl as vm'
                     }
                 }
@@ -59,14 +59,14 @@
             .state('appliance', {
                 url: '/appliance',
                 views: {
-                    '': {templateUrl: '../pages/appliance.html'
+                    '': {templateUrl: 'pages/appliance.html'
                     },
                     'counter@appliance': {
-                        templateUrl: '../pages/appliance-counter.html',
+                        templateUrl: 'pages/appliance-counter.html',
                         controller: 'ApplianceCounterCtrl as vm'
                     },
                     'list@appliance': {
-                        templateUrl: '../pages/appliance-list.html',
+                        templateUrl: 'pages/appliance-list.html',
                         controller: 'ApplianceListCtrl as vm'
                     }
                 }
@@ -75,7 +75,7 @@
                 url:'/add',
             views: {
                 'counter@appliance': {
-                    templateUrl: '../pages/appliance-add.html',
+                    templateUrl: 'pages/appliance-add.html',
                     controller: 'ApplianceAddCtrl as vm'
                 }
             }
@@ -83,29 +83,29 @@
             .state('settings',{
                 url:'/settings',
                 views:{
-                    '':{templateUrl: '../pages/settings.html'
+                    '':{templateUrl: 'pages/settings.html'
                     },
                     'menu@settings': {
-                        templateUrl: '../pages/settings-menu.html'
+                        templateUrl: 'pages/settings-menu.html'
                     },
                     '@settings': {
-                        templateUrl: '../pages/settings-firmware.html'
+                        templateUrl: 'pages/settings-firmware.html'
                     }
                 }
             })
             .state('settings.firmware',{
                 url:'/firmware',
-                templateUrl: '../pages/settings-firmware.html'
+                templateUrl: 'pages/settings-firmware.html'
                 /*  controller: 'SettingsCtrl as vm'*/
             })
             .state('settings.tutorials', {
                 url: '/tutorials',
-                templateUrl: '../pages/settings-tutorials.html'
+                templateUrl: 'pages/settings-tutorials.html'
                 /*  controller: 'SettingsCtrl as vm'*/
             })
             .state('data',{
                 url:'/data',
-                templateUrl: '../pages/data.html',
+                templateUrl: 'pages/data.html',
                 controller: 'DataCtrl as vm'
             })
     }

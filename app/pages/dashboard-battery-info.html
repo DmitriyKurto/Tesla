@@ -3,7 +3,7 @@
     <p class="amount-battery">You Have {{vm.powerwall.number}} Installed Powerwall. Total Power {{vm.powerwall.power * (vm.powerwall.number-1)+10}} kWh</p>
     <div class="row">
         <div class="col-xs-6 col-md-6 col-lg-6 battery">
-            <img ng-dblclick='vm.toggleModal()' src="../img/battery1.png" class="battery-img">
+            <img ng-dblclick='vm.toggleModal()' src="img/battery1.png" class="battery-img">
             <p class="power">Powerwall {{vm.powerwall.power}}kWh v.1</p>
             <div class="status">
                 <p><img ng-src="{{vm.powerwall.status == 'Active' ? 'img/on.png' : 'img/off.png'}}"/>{{vm.powerwall.status}}</p>
@@ -17,10 +17,10 @@
             </div>
         </div>
         <div class="col-xs-6 col-md-6 col-lg-6 battery">
-            <img src="../img/battery2.png">
+            <img src="img/battery2.png">
             <p class="power">Powerwall 10kWh v.1</p>
             <div class="status">
-                <p><img src="../img/on.png">Active</p>
+                <p><img src="img/on.png">Active</p>
             </div>
             <div class="charge-line">
                 <p>Capacity 30%</p>
@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="row box-tap">
-        <img src="../img/hand.png">
+        <img src="img/hand.png">
         <p>Double Tap Each Battery To Get Specific Information</p>
     </div>
 </div>
