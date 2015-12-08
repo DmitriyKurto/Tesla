@@ -26,6 +26,30 @@ at a high level, the structure looks roughly like this:
     |- gulpfile.js
     |- package.json
 
+# Build
+
+Path to built project:
+
+    Tesla/
+    |- dist/
+
+
+ 1.For build project, run watcher and webserver enter the command:
+
+    gulp 
+
+ 2.For only build project:
+
+    gulp public
+
+ 3.For only  run webserver:
+
+    gulp webserver
+
+ 4.For only run watcher:
+
+    gulp watch
+
 # Purpose
 The application is designed to work with Tesla Power Wall (further TPW).
 
