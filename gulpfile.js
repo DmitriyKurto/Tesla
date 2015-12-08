@@ -4,70 +4,58 @@ var gulp = require('gulp'),
     minHTML = require('gulp-minify-html'),
     minCSS = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
-    uncss = require('gulp-uncss'),
     del = require('del'),
-    rename = require('gulp-rename'),
-    mainBowerFiles = require('gulp-main-bower-files');
+    connect = require('gulp-connect'),
+    usemin = require('gulp-usemin');
 
-gulp.task('default', ['public', 'watch']);
-gulp.task('watch', function(){
-    gulp.watch('./app/pages/**/*.html', ['html']);
-    gulp.watch('./app/css/**/*.css', ['css']);
-    gulp.watch('./app/js/**/*.js', ['js']);
-    gulp.watch('./Tesla/app/img/**/*.*', ['img']);
-});
-gulp.task('del', function () {
-    return del('./dist');
-});
-gulp.task('delfile', function () {
-    return del('./dist/libs/bootstrap/dist/css/bootstrap.css');
-});
-gulp.task('html', function(){
-    gulp.src('./app/pages/**/*.html')
-        .pipe(minHTML())
-        .pipe(gulp.dest('./dist/pages'));
-    gulp.src('./app/index.html')
-        .pipe(gulp.dest('dist'));
-});
-gulp.task('css', function(){
-    gulp.src('./app/css/*.css')
-        .pipe(concat('styles.css'))
-        //off because delete styles for d3.js
-        //.pipe(uncss({
-        //    html: ['./Tesla/app/index.html', './Tesla/app/pages/**/*.html']
-        //}))
-        .pipe(minCSS())
-        .pipe(rename('styles.min.css'))
-        .pipe(gulp.dest('./dist/css'));
-});
-gulp.task('js', function(){
-    gulp.src('./app/js/**/*.js')
-        .pipe(concat('scripts.js'))
-    //off because breaks Angular. Need to use the inference style of dependency annotation
-        //.pipe(uglify())
-        .pipe(gulp.dest('./dist/js'));
-});
-gulp.task('img', function(){
-    gulp.src('./app/img/**/*.*')
-        .pipe(gulp.dest('./dist/img'))
-});
-gulp.task('mainfiles', function() {
-    return gulp.src('./bower.json')
-        .pipe(mainBowerFiles())
-        .pipe(gulp.dest('./dist/libs'));
-});
-gulp.task('minmain', ['mainfiles'], function(){
-    gulp.src('./dist/libs/bootstrap/dist/css/bootstrap.css')
-        .pipe(uncss({
-            html: ['./app/index.html', './app/pages/**/*.html']
-        }))
-        .pipe(minCSS())
-        .pipe(rename('bootstrap.min.css'))
-        .pipe(gulp.dest('./dist/libs/bootstrap/dist/css/'));
-});
+gulp.task('default', ['public', 'webserver', 'watch']);
 gulp.task('public', function(callback) {
     runSequence('del',
-        ['html', 'css', 'js', 'img', 'minmain'],
-        'delfile',
+        ['html', 'img', 'usemin'],
         callback);
 });
+gulp.task('webserver', function() {
+    connect.server({
+        root: 'dist',
+        livereload: true,
+        port: 8888
+    });
+});
+gulp.task('watch', function(){
+    gulp.watch('app/*.html', ['usemin']);
+    gulp.watch('app/pages/*.html', ['html']);
+    gulp.watch('app/css/*.css', ['usemin']);
+    gulp.watch('app/js/**/*.js', ['usemin']);
+    gulp.watch('app/img/**/*.*', ['img']);
+});
+gulp.task('del', function () {
+    return del('dist/');
+});
+gulp.task('html-index', function(){
+    gulp.src('app/*.html')
+        //.pipe(minHTML())
+        .pipe(gulp.dest('dist/'));
+});
+gulp.task('html', function(){
+   gulp.src('app/pages/*.html')
+        .pipe(minHTML())
+        .pipe(gulp.dest('dist/pages/'))
+        .pipe(connect.reload());
+});
+gulp.task('img', function(){
+    gulp.src('app/img/**/*.*')
+        .pipe(gulp.dest('dist/img'))
+        .pipe(connect.reload());
+});
+gulp.task('usemin', ['html-index'], function() {
+    return gulp.src('app/index.html')
+        .pipe(usemin({
+            css: [minCSS(), 'concat'],
+            js: ['concat'],
+            js1: ['concat']
+        }))
+        .pipe(gulp.dest('dist/'))
+        .pipe(connect.reload());
+});
+
+
