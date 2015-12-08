@@ -57,5 +57,3 @@ gulp.task('usemin', ['html-index'], function() {
         .pipe(gulp.dest('dist/'))
         .pipe(connect.reload());
 });
-
-
