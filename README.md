@@ -35,19 +35,15 @@ Path to built project:
     |- dist/
 
 
- 1.For build project, run watcher and webserver enter the command:
+ 1.to build project run:
 
     gulp 
 
- 2.For only build project:
-
-    gulp public
-
- 3.For only  run webserver:
+ 2.to run webserver:
 
     gulp webserver
 
- 4.For only run watcher:
+ 3.to run watcher:
 
     gulp watch
 
