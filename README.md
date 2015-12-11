@@ -13,6 +13,7 @@ at a high level, the structure looks roughly like this:
     Tesla/
     |- app/
     | |- css/
+    
     | | |- scss/
     | |- img/
     | |- js/

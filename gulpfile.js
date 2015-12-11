@@ -52,7 +52,7 @@ gulp.task('usemin', ['html-index'], function() {
         .pipe(usemin({
             css: [minCSS(), 'concat'],
             js: ['concat'],
-            js1: ['concat']
+            js1: [uglify({mangle: false}), 'concat']
         }))
         .pipe(gulp.dest('dist/'))
         .pipe(connect.reload());
