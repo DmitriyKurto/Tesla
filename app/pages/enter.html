@@ -4,7 +4,7 @@
         <form class="form-horizontal" name='loginForm'>
             <div class="form-group">
                 <div class="col-xs-offset-4">
-                    <input type="text" class="form-control" placeholder="Enter Username   Dima" ng-model="vm.username" required />
+                    <input type="text" class="form-control" placeholder="Enter Username   Dima" ng-model="vm.username" required/>
                 </div>
             </div>
             <div class="form-group">
@@ -14,7 +14,8 @@
             </div>
             <div class="form-group">
                 <div class="col-xs-offset-4">
-                    <button class="col-xs-6" ng-disabled='loginForm.$invalid' ng-click="vm.login(vm.username, vm.password)">Login</button>
+                    <button class="col-xs-6"
+                            ng-click="loginForm.$valid && vm.login(vm.username, vm.password)">Login</button>
                 </div>
             </div>
             <div class="sign">
@@ -39,7 +40,7 @@
         </div>
         <div class="form-group">
             <div>
-                <button ng-disabled='registryForm.$invalid' ng-click="vm.registry(vm.registryUsername, vm.registryPassword)">Create my account</button>
+                <button ng-click="registryForm.$valid && vm.registry(vm.registryUsername, vm.registryPassword)">Create my account</button>
             </div>
         </div>
     </form>

@@ -3,17 +3,15 @@
     <form name="addForm">
         <div>
             <label>Name</label>
-            <br>
             <input type="text" name='name' ng-model="vm.appliances.name" placeholder="Enter name your new devices" class="form-control" required/>
         </div>
        <div>
            <label>Power</label>
-           <br>
            <input type="number" name='power' ng-model="vm.appliances.power" placeholder="Enter power your new devices" class="form-control" required/>
        </div>
     </form>
     <div class="bottom">
         <a ui-sref="appliance" class="btn">Back</a>
-        <button class="button" type="submit" ng-click="vm.addAppliance(addForm)">Add</button>
+        <button class="button" ng-click="addForm.$valid && vm.addAppliance(addForm)">Add</button>
     </div>
 </div>

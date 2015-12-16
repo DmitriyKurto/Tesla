@@ -9,6 +9,14 @@
     padding-bottom: 7%;
   }
 
+  .ng-invalid.ng-dirty {
+    border-color: red;
+  }
+
+  //.ng-valid.ng-dirty {
+  //  border-color: green;
+  //}
+
   .logo-img {
     margin: 7% auto;
     display: block;

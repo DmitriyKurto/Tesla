@@ -2,23 +2,23 @@
     <div class="col-xs-12">
         <div class="box">
             <h1> Please enter your information</h1>
-            <form class="form-horizontal">
+            <form class="form-horizontal" name="dataForm">
                 <div class="form-group">
                     <lablel class="col-xs-5 control-label">The number of powerwall</lablel>
                     <div class="col-xs-7">
-                        <input type="number" ng-model="vm.powerwall.number" class="form-control">
+                        <input type="number" ng-model="vm.powerwall.number" class="form-control" required/>
                     </div>
                 </div>
                 <div class="form-group">
                     <lablel class="col-xs-5 control-label">Power powerwall</lablel>
                     <div class="col-xs-7">
-                        <input type="number" ng-model="vm.powerwall.power" class="form-control">
+                        <input type="number" ng-model="vm.powerwall.power" class="form-control" required/>
                     </div>
                 </div>
                 <div class="form-group">
                     <lablel class="col-xs-5 control-label">Status</lablel>
                     <div class="col-xs-7">
-                        <select ng-model="vm.powerwall.status" class="form-control">
+                        <select ng-model="vm.powerwall.status" class="form-control" required/>
                             <option value="Active">Active</option>
                             <option value="Passive">Passive</option>
                         </select>
@@ -27,18 +27,18 @@
                 <div class="form-group">
                     <lablel class="col-xs-5 control-label">Capacity</lablel>
                     <div class="col-xs-7">
-                        <input type="number" ng-model="vm.powerwall.capacity" class="form-control">
+                        <input type="number" ng-model="vm.powerwall.capacity" class="form-control" required/>
                     </div>
                 </div>
                 <div class="form-group">
                     <lablel class="col-xs-5 control-label">Temperature</lablel>
                     <div class="col-xs-7">
-                        <input type="number" ng-model="vm.powerwall.temperature" class="form-control">
+                        <input type="number" ng-model="vm.powerwall.temperature" class="form-control" required/>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-offset-5 col-xs-7">
-                        <button class="button" ng-click="vm.save()">Save</button>
+                        <button class="button" ng-click="dataForm.$valid && vm.save()">Save</button>
                     </div>
                 </div>
             </form>

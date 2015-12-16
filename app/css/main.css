@@ -308,7 +308,7 @@ h1 {
 .add form {
   text-align: center; }
 .add label {
-  margin: 30px 0 10px 0;
+  margin: 30px 0 30px 0;
   display: block;
   color: #4A4A4A;
   font: 20px "Open Sans", sans-serif; }
@@ -354,6 +354,8 @@ h1 {
   width: 80%;
   margin: 5% auto;
   padding-bottom: 7%; }
+.enter .ng-invalid.ng-dirty {
+  border-color: red; }
 .enter .logo-img {
   margin: 7% auto;
   display: block; }
