@@ -8,7 +8,7 @@
 }
 @media (max-width: 768px) {
   .navbar .nav img{
-    display: none;
+    display: none !important;
   }
   .container {
     min-width: 550px;
